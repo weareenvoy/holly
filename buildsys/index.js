@@ -27,7 +27,7 @@ global.gulp = gulp
  * Require all gulp tasks...
  */
 // const tasks = fs.readdirSync('./buildsys/tasks/')
-var tasks = fs.readdirSync('./buildsys/tasks/')
+var tasks = fs.readdirSync(__dirname + '/tasks/')
 tasks.forEach(function (task) {
   if (/\.js/.test(task)) {
     console.log(`Requiring task ${task}...`)
