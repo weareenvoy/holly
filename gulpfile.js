@@ -2,7 +2,7 @@
   - - - - -
   H O L L Y
   - - - - -
-  ./gulpfile.babel.js
+  ./gulpfile.js
   ENVOY frontend Gulp build system and boilerplate.
   @author ENVOY development team
  */
