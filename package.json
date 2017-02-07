@@ -4,7 +4,7 @@
   "description": "ENVOYsites Gulp build system and boilerplate.",
   "main": "index.js",
   "scripts": {
-    "postinstall": "node scripts/install.js",
+    "postinstall": "node install.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
