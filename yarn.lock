@@ -2,3 +2,6 @@
 # yarn lockfile v1
 
 
+holly@weareenvoy/holly:
+  version "0.0.1"
+  resolved "https://codeload.github.com/weareenvoy/holly/tar.gz/7c9942c9283e5a10beb7b8f0a11c8ec1f86f93b6"
