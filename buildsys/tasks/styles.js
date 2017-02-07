@@ -15,9 +15,9 @@ var plumber = require('gulp-plumber')
 
 /* $ gulp styles */
 gulp.task('styles', function () {
-  return gulp.src('./src/styles/**/*.js')
+  return gulp.src(config.styles.src + '/**/*.{scss,sass}')
     .pipe(plumber())
     .pipe(sass())
     .pipe(sourcemaps.write('sourcemaps'))
-    .pipe(gulp.dest('./dist/css'))
+    .pipe(gulp.dest(config.styles.output))
 })

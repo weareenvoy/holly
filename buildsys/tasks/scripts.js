@@ -17,9 +17,9 @@ var plumber = require('gulp-plumber')
 
 /* $ gulp scripts */
 gulp.task('scripts', function () {
-  return gulp.src('./src/scripts/**/*.js')
+  return gulp.src(config.scripts.src + '/**/*.js')
     .pipe(plumber())
     .pipe(babel())
     .pipe(sourcemaps.write('sourcemaps'))
-    .pipe(gulp.dest('./dist/js'))
+    .pipe(gulp.dest(config.scripts.output))
 })

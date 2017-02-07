@@ -7,4 +7,5 @@
   @author ENVOY development team
  */
 
+global.config = require('./config');
 require('./buildsys')
