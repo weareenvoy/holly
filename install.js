@@ -1,6 +1,6 @@
 var fs = require('fs')
-
-fs.writeFile(__dirname + '/gulpfile.js', 'console.log("Hello, World!")', function (err) {
+console.log('dir: ' + process.cwd())
+fs.writeFile(process.cwd() + '/gulpfile.js', 'console.log("Hello, World!")', function (err) {
   if (err) {
     return console.log(err)
   }
