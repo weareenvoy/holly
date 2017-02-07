@@ -4,6 +4,7 @@
   "description": "ENVOYsites Gulp build system and boilerplate.",
   "main": "index.js",
   "scripts": {
+    "postinstall": "node scripts/install.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +16,6 @@
   "bugs": {
     "url": "https://github.com/weareenvoy/holly/issues"
   },
-  "homepage": "https://github.com/weareenvoy/holly#readme"
+  "homepage": "https://github.com/weareenvoy/holly#readme",
+  "dependencies": {}
 }
