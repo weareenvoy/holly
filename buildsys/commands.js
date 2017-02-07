@@ -4,7 +4,8 @@
  * @author Keenan Staffieri
  */
 
-import runSequence from 'run-sequence'
+// import runSequence from 'run-sequence'
+var runSequence = require('run-sequence')
 
 /* --- $ gulp --- */
 gulp.task('default', function (cb) {

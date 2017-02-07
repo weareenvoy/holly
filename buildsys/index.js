@@ -4,11 +4,14 @@
  * @author Keenan Staffieri
  */
 
-import gulp from 'gulp'
-import fs from 'fs'
+// import gulp from 'gulp'
+// import fs from 'fs'
+var gulp = require('gulp')
+var fs = require('fs')
 
 // Grab command line arguments
-const argv = require('yargs').argv
+// const argv = require('yargs').argv
+var argv = require('yargs').argv
 
 /**
  * Globals
@@ -23,7 +26,8 @@ global.gulp = gulp
 /**
  * Require all gulp tasks...
  */
-const tasks = fs.readdirSync('./buildsys/tasks/')
+// const tasks = fs.readdirSync('./buildsys/tasks/')
+var tasks = fs.readdirSync('./buildsys/tasks/')
 tasks.forEach(function (task) {
   if (/\.js/.test(task)) {
     console.log(`Requiring task ${task}...`)

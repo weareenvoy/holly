@@ -7,8 +7,4 @@
   @author ENVOY development team
  */
 
-// Require Babel for transpiling
-require('babel-core/register')
-require('babel-polyfill')
-
 require('./buildsys')
