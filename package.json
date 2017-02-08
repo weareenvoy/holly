@@ -28,6 +28,7 @@
     "gulp-standard": "^8.0.3",
     "gulp-uglify": "^2.0.1",
     "gulp-watch": "^4.3.11",
+    "inquirer": "^3.0.1",
     "normalize.css": "^5.0.0",
     "run-sequence": "^1.2.2"
   }
