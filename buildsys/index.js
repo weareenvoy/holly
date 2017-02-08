@@ -4,13 +4,10 @@
  * @author Keenan Staffieri
  */
 
-// import gulp from 'gulp'
-// import fs from 'fs'
 var gulp = require('gulp')
 var fs = require('fs')
 
 // Grab command line arguments
-// const argv = require('yargs').argv
 var argv = require('yargs').argv
 
 /**
@@ -20,13 +17,15 @@ var argv = require('yargs').argv
 // Set build environment (dev or prod)
 global.env = argv.prod ? 'prod' : 'dev'
 
+// Set build system mode
+global.mode = argv.dev ? 'dev' : 'normal'
+
 // Make gulp globally accessible
 global.gulp = gulp
 
 /**
  * Require all gulp tasks...
  */
-// const tasks = fs.readdirSync('./buildsys/tasks/')
 var tasks = fs.readdirSync(__dirname + '/tasks/')
 tasks.forEach(function (task) {
   if (/\.js/.test(task)) {
@@ -35,7 +34,23 @@ tasks.forEach(function (task) {
   }
 })
 
+
 /**
- * Require gulp commands
+ * Require default gulp commands
  */
-require('./commands')
+var taskList = require('./default-tasks')
+// Run default gulp task for development mode
+if (mode === 'dev') {
+  var runSequence = require('run-sequence')
+
+  // Append 'watch' task for local development
+  taskList.push('watch')
+
+  /* --- $ gulp --- */
+  gulp.task('default', function (cb) {
+    return runSequence.apply(null, taskList)
+  })
+// Otherwise, assign default tasks for extended build system
+} else {
+  global.taskList = taskList
+}
