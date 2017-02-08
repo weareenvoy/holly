@@ -7,6 +7,7 @@
  */
 
 var inquirer = require('inquirer')
+var batchReplace = require('gulp-batch-replace')
 
 /* $ gulp init */
 gulp.task('init', function () {
@@ -51,11 +52,15 @@ gulp.task('init', function () {
       }
     }
   ]).then(function (answers) {
-    console.log('answers: ', answers)
-
     if (answers.proceed) {
       console.log('Scaffolding initial boilerplate files...')
+
+      var replaceProps = [
+        ['<%= PROJECT_NAME =%>', answers.projectName]
+      ]
+
       return gulp.src(config.paths.hollyRoot + '/templates/src/**/*')
+        .pipe(batchReplace(replaceProps))
         .pipe(gulp.dest(config.paths.srcRoot))
     } else {
       console.log('Nothing to scaffold, exiting project init flow.')

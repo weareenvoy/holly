@@ -1,6 +1,6 @@
 /**
  * ./src/scripts.js
- * Main scripts file.
+ * Main scripts file for <%= PROJECT_NAME =%>.
  * @author Keenan Staffieri
  */
 
