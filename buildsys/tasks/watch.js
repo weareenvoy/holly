@@ -13,14 +13,14 @@ var watch = require('gulp-watch')
 gulp.task('watch', function () {
 
   // Watch for style changes
-  watch(config.styles.src + '/**/*.{scss,sass}', {
+  watch(config.styles.paths.src + '/**/*.{scss,sass}', {
     name: 'Styles Watcher'
   }, function () {
     gulp.start('styles')
   })
 
   // Watch for script changes
-  watch(config.scripts.src + '/**/*.js', {
+  watch(config.scripts.paths.src + '/**/*.js', {
     name: 'Scripts Watcher'
   }, function () {
     gulp.start('scripts')

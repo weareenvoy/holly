@@ -9,9 +9,11 @@ var runSequence = require('run-sequence')
 
 /* --- $ gulp --- */
 gulp.task('default', function (cb) {
-  return runSequence([
-    'styles',
-    'scripts',
+  return runSequence(
+    [
+      'styles',
+      'scripts',
+    ],
     'watch'
-  ])
+  )
 })
