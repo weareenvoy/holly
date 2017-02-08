@@ -20,6 +20,9 @@ global.env = argv.prod ? 'prod' : 'dev'
 // Set build system mode
 global.mode = argv['local-dev'] ? 'local-dev' : 'normal'
 
+// Are we running the build system without a child package?
+global.standalone = argv.standalone
+
 // Make gulp globally accessible
 global.gulp = gulp
 
@@ -43,7 +46,7 @@ if (mode === 'local-dev') {
   var runSequence = require('run-sequence')
 
   // Append 'watch' task for dev env
-  if (env === 'dev') {
+  if (standalone && env === 'dev') {
     taskList.push('watch')
   }
 
@@ -51,7 +54,6 @@ if (mode === 'local-dev') {
   gulp.task('default', function (cb) {
     return runSequence.apply(null, taskList)
   })
-// Otherwise, assign default tasks for extended build system
-} else {
-  global.taskList = taskList
 }
+
+global.taskList = taskList
