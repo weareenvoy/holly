@@ -30,7 +30,7 @@ global.gulp = gulp
 var tasks = fs.readdirSync(__dirname + '/tasks/')
 tasks.forEach(function (task) {
   if (/\.js/.test(task)) {
-    console.log(`Requiring task ${task}...`)
+    console.log(`holly: requiring task ${task}...`)
     require(`./tasks/${task}`)
   }
 })
