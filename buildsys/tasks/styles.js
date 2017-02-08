@@ -10,13 +10,15 @@ var postcss = require('gulp-postcss')
 var sass = require('gulp-sass')
 var autoprefixer = require('autoprefixer')
 var cssnano = require('cssnano')
+var lost = require('lost')
 var sourcemaps = require('gulp-sourcemaps')
 var plumber = require('gulp-plumber')
 
 /* $ gulp styles */
 gulp.task('styles', function () {
   var processors = [
-    autoprefixer
+    autoprefixer,
+    lost
   ]
   if (env === 'prod') {
     processors.push(cssnano)
