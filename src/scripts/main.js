@@ -5,9 +5,14 @@
  */
 
 class MyClass {
-  constructor (msg) {
+  constructor () {
+    console.log('MyClass initialized!')
+  }
+
+  say (msg) {
     console.log(msg)
   }
 }
 
-new MyClass('Hello, World')
+const myClass = new MyClass('Hello, World')
+myClass.say('Hello, World!')

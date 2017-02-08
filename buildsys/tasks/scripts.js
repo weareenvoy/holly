@@ -6,19 +6,20 @@
  * 'gulp scripts'
  */
 
-// import babel from 'gulp-babel'
-// import uglify from 'gulp-uglify'
-// import sourcemaps from 'gulp-sourcemaps'
-// import plumber from 'gulp-plumber'
 var babel = require('gulp-babel')
 var uglify = require('gulp-uglify')
 var sourcemaps = require('gulp-sourcemaps')
 var plumber = require('gulp-plumber')
+var standard = require('gulp-standard')
 
 /* $ gulp scripts */
 gulp.task('scripts', function () {
   return gulp.src(config.scripts.src + '/**/*.js')
     .pipe(plumber())
+    .pipe(standard())
+    .pipe(standard.reporter('default', {
+      breakOnError: true
+    }))
     .pipe(babel())
     .pipe(sourcemaps.write('sourcemaps'))
     .pipe(gulp.dest(config.scripts.output))
