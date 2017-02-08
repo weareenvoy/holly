@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "ENVOYsites Gulp build system and boilerplate.",
   "scripts": {
+    "init": "gulp init --local-dev",
     "dev": "gulp --local-dev",
     "build": "gulp --local-dev --prod",
     "test": "echo \"Error: no test specified\" && exit 1"
