@@ -18,7 +18,7 @@ var argv = require('yargs').argv
 global.env = argv.prod ? 'prod' : 'dev'
 
 // Set build system mode
-global.mode = argv.dev ? 'dev' : 'normal'
+global.mode = argv['local-dev'] ? 'local-dev' : 'normal'
 
 // Make gulp globally accessible
 global.gulp = gulp
@@ -39,11 +39,13 @@ tasks.forEach(function (task) {
  */
 var taskList = require('./default-tasks')
 // Run default gulp task for development mode
-if (mode === 'dev') {
+if (mode === 'local-dev') {
   var runSequence = require('run-sequence')
 
-  // Append 'watch' task for local development
-  taskList.push('watch')
+  // Append 'watch' task for dev env
+  if (env === 'dev') {
+    taskList.push('watch')
+  }
 
   /* --- $ gulp --- */
   gulp.task('default', function (cb) {

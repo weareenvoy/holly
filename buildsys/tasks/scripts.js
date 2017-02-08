@@ -10,8 +10,9 @@ var runSequence = require('run-sequence')
 var standard = require('gulp-standard')
 var plumber = require('gulp-plumber')
 var babel = require('gulp-babel')
-// var uglify = require('gulp-uglify')
+var uglify = require('gulp-uglify')
 var sourcemaps = require('gulp-sourcemaps')
+var gulpif = require('gulp-if')
 
 var srcScriptsGlob = config.scripts.paths.src + '/**/*.js'
 
@@ -37,6 +38,7 @@ gulp.task('scripts:compile', function () {
   return gulp.src(srcScriptsGlob)
     .pipe(plumber())
     .pipe(babel())
+    .pipe(gulpif((env === 'prod'), uglify()))
     .pipe(sourcemaps.write('sourcemaps'))
     .pipe(gulp.dest(config.scripts.paths.output))
 })
