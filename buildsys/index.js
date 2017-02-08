@@ -34,7 +34,6 @@ tasks.forEach(function (task) {
   }
 })
 
-
 /**
  * Require default gulp commands
  */
