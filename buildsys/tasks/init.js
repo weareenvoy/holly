@@ -59,7 +59,7 @@ gulp.task('init', function () {
         ['<%= PROJECT_NAME =%>', answers.projectName]
       ]
 
-      var hollyRootPath = (mode === 'local-dev') ? config.paths.hollyRoot : baseConfig.paths.hollyRoot
+      var hollyRootPath = (standalone) ? config.paths.hollyRoot : baseConfig.paths.hollyRoot
 
       return gulp.src(hollyRootPath + '/templates/src/**/*')
         .pipe(batchReplace(replaceProps))
