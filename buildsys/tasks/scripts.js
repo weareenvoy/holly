@@ -37,7 +37,7 @@ gulp.task('scripts:lint', function () {
 gulp.task('scripts:compile', function () {
   return gulp.src(srcScriptsGlob)
     .pipe(plumber())
-    .pipe(babel())
+    .pipe(babel({ presets: ['es2015'] }))
     .pipe(gulpif((env === 'prod'), uglify()))
     .pipe(sourcemaps.write('sourcemaps'))
     .pipe(gulp.dest(config.scripts.paths.output))
