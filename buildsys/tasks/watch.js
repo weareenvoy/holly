@@ -25,4 +25,11 @@ gulp.task('watch', function () {
   }, function () {
     gulp.start('scripts')
   })
+
+  // Watch for asset changes
+  watch(config.assets.paths.src + '/**/*.*', {
+    name: 'Assets Watcher'
+  }, function () {
+    gulp.start('copy-assets')
+  })
 })
