@@ -37,8 +37,9 @@ gulp.task('scripts:lint', function () {
 gulp.task('scripts:compile', function () {
   return gulp.src(srcScriptsGlob)
     .pipe(plumber())
+    .pipe(gulpif((env === 'dev'), sourcemaps.init()))
     .pipe(babel())
     .pipe(gulpif((env === 'prod'), uglify()))
-    .pipe(sourcemaps.write('sourcemaps'))
+    .pipe(gulpif((env === 'dev'), sourcemaps.write()))
     .pipe(gulp.dest(config.scripts.paths.output))
 })

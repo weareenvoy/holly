@@ -13,6 +13,7 @@ var cssnano = require('cssnano')
 var lost = require('lost')
 var sourcemaps = require('gulp-sourcemaps')
 var plumber = require('gulp-plumber')
+var gulpif = require('gulp-if')
 
 /* $ gulp styles */
 gulp.task('styles', function () {
@@ -25,8 +26,9 @@ gulp.task('styles', function () {
   }
   return gulp.src(config.styles.paths.src + '/**/*.{scss,sass}')
     .pipe(plumber())
+    .pipe(gulpif((env === 'dev'), sourcemaps.init()))
     .pipe(sass())
     .pipe(postcss(processors))
-    .pipe(sourcemaps.write('sourcemaps'))
+    .pipe(gulpif((env === 'dev'), sourcemaps.write()))
     .pipe(gulp.dest(config.styles.paths.output))
 })
