@@ -13,7 +13,9 @@ var babelify = require('babelify')
 var uglify = require('gulp-uglify')
 var sourcemaps = require('gulp-sourcemaps')
 var gulpif = require('gulp-if')
-var browserify = require('gulp-browserify')
+var browserify = require('browserify')
+var source = require('vinyl-source-stream')
+var buffer = require('vinyl-buffer')
 
 var srcScriptsGlob = config.scripts.paths.src + '/**/*.js'
 
@@ -33,12 +35,20 @@ gulp.task('scripts:lint', function () {
 
 /* $ gulp scripts:compile */
 gulp.task('scripts:compile', function () {
-  return gulp.src(srcScriptsGlob)
+
+  var b = browserify({
+    entries: config.scripts.paths.src + '/main.js',
+    debug: true
+  })
+
+  return b.transform(babelify.configure({
+      presets: [ 'es2015' ]
+    }))
+    .bundle()
+    .pipe(source('./main.js'))
+    .pipe(buffer())
     .pipe(plumber())
     .pipe(gulpif((env === 'dev'), sourcemaps.init()))
-    .pipe(browserify({
-      transform: [ 'babelify' ]
-    }))
     .pipe(gulpif((env === 'prod'), uglify()))
     .pipe(gulpif((env === 'dev'), sourcemaps.write()))
     .pipe(gulp.dest(config.scripts.paths.output))
