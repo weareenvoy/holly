@@ -16,7 +16,7 @@ var plumber = require('gulp-plumber')
 var gulpif = require('gulp-if')
 
 /* $ gulp styles */
-gulp.task('styles', function () {
+gulp.task('styles', ['clean'], function () {
   var processors = [
     autoprefixer,
     lost
