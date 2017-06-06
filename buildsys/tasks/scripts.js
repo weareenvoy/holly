@@ -20,7 +20,7 @@ var buffer = require('vinyl-buffer')
 var srcScriptsGlob = config.scripts.paths.src + '/**/*.js'
 
 /* $ gulp scripts */
-gulp.task('scripts', function () {
+gulp.task('scripts', ['clean'], function () {
   return runSequence('scripts:lint', 'scripts:compile')
 })
 

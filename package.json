@@ -1,6 +1,6 @@
 {
   "name": "envoy-holly",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "ENVOYsites Gulp build system and boilerplate.",
   "scripts": {
     "init": "gulp init --local-dev --standalone",
@@ -27,11 +27,15 @@
     "bourbon-neat": "^1.8.0",
     "browserify": "^14.1.0",
     "cssnano": "^3.10.0",
+    "del": "^2.2.2",
     "gulp": "^3.9.1",
     "gulp-batch-replace": "^0.0.0",
     "gulp-if": "^2.0.2",
     "gulp-plumber": "^1.1.0",
     "gulp-postcss": "^6.3.0",
+    "gulp-replace": "^0.5.4",
+    "gulp-rev": "^7.1.2",
+    "gulp-rev-css-url": "^0.1.0",
     "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^2.4.1",
     "gulp-standard": "^8.0.3",
