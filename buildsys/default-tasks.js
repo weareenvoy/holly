@@ -8,7 +8,7 @@ module.exports = [
   [
     'styles',
     'scripts',
-    'copy-assets',
-    'rev'
-  ]
+    'copy-assets'
+  ],
+  'rev'
 ]
