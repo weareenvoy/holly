@@ -11,7 +11,7 @@ var replace = require('gulp-replace')
 var rev = require('gulp-rev')
 
 /* $ gulp rev */
-gulp.task('rev', ['copy-assets', 'scripts', 'styles'], function () {
+gulp.task('rev', function () {
   if (env === 'prod') {
     return gulp.src(config.paths.distRoot + '/**')
       .pipe(rev())
