@@ -8,9 +8,9 @@ var del = require('del')
 
 /* $ gulp clean */
 gulp.task('clean', function () {
-  if (env === 'prod') {
+  // if (env === 'prod') {
     return del([config.paths.distRoot + '/**'])
-  } else {
-    return del([config.paths.distRoot + '/rev-manifest.json'])
-  }
+  // } else {
+  //   return del([config.paths.distRoot + '/rev-manifest.json'])
+  // }
 })

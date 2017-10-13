@@ -24,6 +24,7 @@
 @import 'elements/controls/radio';
 @import 'elements/controls/select';
 @import 'elements/controls/textarea';
+@import '../components/Modal/modal';
 
 body {
   color: $font-color-base;

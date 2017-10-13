@@ -4,6 +4,7 @@
  */
 
 module.exports = [
+  'clean', // TODO: Do not clean if not static
   [
     'styles',
     'scripts',

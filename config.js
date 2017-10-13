@@ -37,5 +37,10 @@ module.exports = {
       src: srcRoot + '/js',
       output: distRoot + '/js'
     }
+  },
+  components: {
+    paths: {
+      src: srcRoot + '/components'
+    }
   }
 }

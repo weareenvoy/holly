@@ -19,7 +19,7 @@ var browserSync = require('../browserSync').server
 var srcScriptsGlob = config.scripts.paths.src + '/**/*.js'
 
 /* $ gulp scripts */
-gulp.task('scripts', ['clean'], function () {
+gulp.task('scripts', function () {
   return runSequence('scripts:lint', 'scripts:compile')
 })
 

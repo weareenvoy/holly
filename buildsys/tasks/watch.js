@@ -18,14 +18,20 @@ gulp.task('watch', function () {
   })
 
   // Watch for style changes
-  watch(config.styles.paths.src + '/**/*.{scss,sass}', {
+  watch([
+    config.styles.paths.src + '/**/*.{scss,sass}',
+    config.components.paths.src + '/**/*.{scss,sass}'
+  ], {
     name: 'Styles Watcher'
   }, function () {
     gulp.start('styles')
   })
 
   // Watch for script changes
-  watch(config.scripts.paths.src + '/**/*.js', {
+  watch([
+    config.scripts.paths.src + '/**/*.js',
+    config.components.paths.src + '/**/*.js'
+  ], {
     name: 'Scripts Watcher'
   }, function () {
     gulp.start('scripts')

@@ -1,4 +1,3 @@
-// import './modal.scss'
 import { Component } from '../Component'
 import $ from 'jquery'
 
