@@ -1,0 +1,8 @@
+{% set ns = 'modal' %}
+
+<div id="{{ id }}" class="{{ns}}" data-options="{{ options|json_encode|escape }}">
+  <div class="{{ns}}__box">
+    <h1>title: {{ title }}</h1>
+  </div>
+  <div class="{{ns}}__overlay"></div>
+</div>

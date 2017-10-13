@@ -1,0 +1,39 @@
+@mixin clearfix {
+  &:after {
+    clear: both;
+    content: "";
+    display: block;
+  }
+}
+
+@mixin clear-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin font-aa {
+  -webkit-font-smoothing: antialiased;
+}
+
+@mixin optimizeLegibility {
+  text-rendering: optimizeLegibility;
+}
+
+@mixin placeholder {
+  &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    @content;
+  }
+
+  &::-moz-placeholder { /* Firefox 19+ */
+    @content;
+  }
+
+  &:-ms-input-placeholder { /* IE 10+ */
+    @content;
+  }
+
+  &:-moz-placeholder { /* Firefox 18- */
+    @content;
+  }
+}

@@ -1,0 +1,34 @@
+$ns: '.modal';
+
+#{$ns} {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+
+  &--opened {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.5;
+  }
+
+  &__box {
+    position: relative;
+    padding: 30px;
+    background-color: white;
+    z-index: 10;
+  }
+}
