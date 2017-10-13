@@ -14,6 +14,12 @@ module.exports = {
     distRoot: distRoot,
     distDocRoot: docRoot
   },
+  templates: {
+    paths: {
+      src: srcRoot + '/templates',
+      output: distRoot + '/templates'
+    }
+  },
   assets: {
     paths: {
       src: srcRoot + '/assets',
@@ -22,13 +28,13 @@ module.exports = {
   },
   styles: {
     paths: {
-      src: srcRoot + '/styles',
+      src: srcRoot + '/css',
       output: distRoot + '/css'
     }
   },
   scripts: {
     paths: {
-      src: srcRoot + '/scripts',
+      src: srcRoot + '/js',
       output: distRoot + '/js'
     }
   }
