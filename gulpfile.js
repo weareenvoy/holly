@@ -16,6 +16,7 @@
   - make better way to extend / override config
   - add more / modify questions when installing for the first time
   - add scaffolding / make commands to add new components or install existing ones
+  - create initial single styleguide page with all the base elements
   - optimize local dev environment
   - test prod settings
   - test via node_modules install

@@ -8,6 +8,15 @@
 @import 'elements/inline-text-elements';
 @import 'elements/address';
 @import 'elements/blockquote';
+@import 'elements/lists';
+@import 'elements/description';
+@import 'elements/dividers';
+@import 'elements/buttons';
+@import 'elements/code/block';
+@import 'elements/code/inline';
+@import 'elements/code/sample-output';
+@import 'elements/code/user-input';
+@import 'elements/code/variable';
 
 body {
   color: $font-color-base;
@@ -68,53 +77,52 @@ blockquote { @include blockquote; }
 /* -------------------------------------------------------- */
 
 // --- Lists ----------------------------------------------
-// ul               { @include list; }
-// ul.list-inline   { @include list('inline'); }
-// ul.list-unstyled { @include list('unstyled'); }
-// ol               { @include list('ordered'); }
-// ul.list-condensed,
-// ol.list-condensed {
-//   @include list('condensed');
-// }
+ul               { @include list-unordered; }
+ul.list-inline   { @include list-unordered('inline'); }
+ul.list-unstyled { @include list-unstyled; }
+ol               { @include list-ordered; }
+ul.list-condensed,
+ol.list-condensed {
+  @include list-condensed;
+}
 
 // --- Description ----------------------------------------
-// dl               { @include description-list; }
-// dl.dl-horizontal { @include description-list('horizontal'); }
+dl               { @include description; }
+dl.dl-horizontal { @include description-horizontal; }
 
 /* -------------------------------------------------------- */
 /* --- DIVIDERS ------------------------------------------- */
 /* -------------------------------------------------------- */
 
 // --- Default --------------------------------------------
-// hr { @include divider; }
+hr { @include divider; }
 
 /* -------------------------------------------------------- */
 /* --- BUTTONS -------------------------------------------- */
 /* -------------------------------------------------------- */
 
 // --- Default --------------------------------------------
-// button,
-// .btn { @include btn; }
+button,
+.btn { @include btn; }
 
 /* -------------------------------------------------------- */
 /* --- CODE ----------------------------------------------- */
 /* -------------------------------------------------------- */
 
 // --- Inline ---------------------------------------------
-// code          { @include code; }
-// code.unstyled { @include code('unstyled'); }
+code { @include code; }
 
 // --- User Input -----------------------------------------
-// kbd { @include user-input; }
+kbd { @include user-input; }
 
 // --- Block ----------------------------------------------
-// pre { @include code-block; }
+pre { @include code-block; }
 
 // --- Variable -------------------------------------------
-// var { @include variable; }
+var { @include variable; }
 
 // --- Sample Output --------------------------------------
-// samp { @include sample-output; }
+samp { @include sample-output; }
 
 /* -------------------------------------------------------- */
 /* --- TABLES --------------------------------------------- */

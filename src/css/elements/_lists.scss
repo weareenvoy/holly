@@ -1,0 +1,21 @@
+// -------------------------- Shared all lists <ul> and <ol>
+@mixin list {
+}
+
+// -------------------------- Unordered List <ul>
+@mixin list-unordered($type: 'default') {
+  @include list;
+}
+
+// -------------------------- Ordered List <ol>
+@mixin list-ordered {
+  @include list;
+}
+
+// -------------------------- Unstyled List <ul.list-unstyled> and <ol.list-unstyled>
+@mixin list-unstyled {
+}
+
+// -------------------------- Condensed List <ul.list-condensed> and <ol.list-condensed>
+@mixin list-condensed {
+}
