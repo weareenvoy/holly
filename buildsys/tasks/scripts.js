@@ -42,7 +42,7 @@ gulp.task('scripts:compile', function () {
   })
 
   return b.transform(babelify.configure({
-      presets: [ 'es2015' ]
+      presets: [ 'env' ]
     }))
     .bundle()
     .pipe(source('./main.js'))
