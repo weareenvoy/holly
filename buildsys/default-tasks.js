@@ -10,7 +10,8 @@ module.exports = [
     'copy-assets',
 
     // TODO: Refactor, added for static builds...
-    'templates'
+    'templates',
+    'serve'
   ],
   'rev'
 ]

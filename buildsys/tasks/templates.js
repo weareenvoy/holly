@@ -8,7 +8,7 @@ var twig = require('gulp-twig')
 
 /* $ gulp templates */
 gulp.task('templates', function () {
-  gulp.src(config.templates.paths.src + '/**/*.twig')
+  return gulp.src(config.templates.paths.src + '/**/*.twig')
     .pipe(twig({
       data: {
         title: 'Gulp and Twig',

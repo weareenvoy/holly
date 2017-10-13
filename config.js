@@ -17,7 +17,7 @@ module.exports = {
   templates: {
     paths: {
       src: srcRoot + '/templates',
-      output: distRoot + '/templates'
+      output: distRoot
     }
   },
   assets: {
