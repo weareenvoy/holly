@@ -16,7 +16,10 @@ var source = require('vinyl-source-stream')
 var buffer = require('vinyl-buffer')
 var browserSync = require('../browserSync').server
 
-var srcScriptsGlob = config.scripts.paths.src + '/**/*.js'
+var srcScriptsGlob = [
+  config.scripts.paths.src + '/**/*.js',
+  config.components.paths.src + '/**/*.js'
+]
 
 /* $ gulp scripts */
 gulp.task('scripts', function () {
