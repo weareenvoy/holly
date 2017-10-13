@@ -11,7 +11,7 @@ var cssnano = require('cssnano')
 var sourcemaps = require('gulp-sourcemaps')
 var plumber = require('gulp-plumber')
 var gulpif = require('gulp-if')
-var browserSync = require('../browserSync')
+var browserSync = require('../browserSync').server
 
 /* $ gulp styles */
 gulp.task('styles', ['clean'], function () {

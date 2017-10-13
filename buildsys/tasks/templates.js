@@ -5,7 +5,7 @@
  */
 
 var twig = require('gulp-twig')
-var browserSync = require('../browserSync')
+var browserSync = require('../browserSync').server
 
 /* $ gulp templates */
 gulp.task('templates', function () {

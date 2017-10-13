@@ -4,13 +4,10 @@
  * TASK: Serve
  */
 
-var browserSync = require('../browserSync')
+var config = require('../browserSync').config
+var browserSync = require('../browserSync').server
 
 /* $ gulp serve */
 gulp.task('serve', function () {
-  return browserSync.init({
-    server: config.paths.distRoot,
-    port: 8000,
-    open: false
-  })
+  return browserSync.init(config)
 })

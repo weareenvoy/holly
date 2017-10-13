@@ -14,7 +14,7 @@ var gulpif = require('gulp-if')
 var browserify = require('browserify')
 var source = require('vinyl-source-stream')
 var buffer = require('vinyl-buffer')
-var browserSync = require('../browserSync')
+var browserSync = require('../browserSync').server
 
 var srcScriptsGlob = config.scripts.paths.src + '/**/*.js'
 
