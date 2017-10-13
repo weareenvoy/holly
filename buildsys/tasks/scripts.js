@@ -14,6 +14,7 @@ var gulpif = require('gulp-if')
 var browserify = require('browserify')
 var source = require('vinyl-source-stream')
 var buffer = require('vinyl-buffer')
+var browserSync = require('../browserSync')
 
 var srcScriptsGlob = config.scripts.paths.src + '/**/*.js'
 
@@ -50,4 +51,5 @@ gulp.task('scripts:compile', function () {
     .pipe(gulpif((env === 'prod'), uglify()))
     .pipe(gulpif((env === 'dev'), sourcemaps.write()))
     .pipe(gulp.dest(config.scripts.paths.output))
+    .on('end', browserSync.reload)
 })

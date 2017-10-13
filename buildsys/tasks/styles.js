@@ -11,6 +11,7 @@ var cssnano = require('cssnano')
 var sourcemaps = require('gulp-sourcemaps')
 var plumber = require('gulp-plumber')
 var gulpif = require('gulp-if')
+var browserSync = require('../browserSync')
 
 /* $ gulp styles */
 gulp.task('styles', ['clean'], function () {
@@ -27,4 +28,5 @@ gulp.task('styles', ['clean'], function () {
     .pipe(postcss(processors))
     .pipe(gulpif((env === 'dev'), sourcemaps.write()))
     .pipe(gulp.dest(config.styles.paths.output))
+    .pipe(browserSync.stream())
 })

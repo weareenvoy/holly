@@ -5,19 +5,12 @@
  */
 
 var twig = require('gulp-twig')
+var browserSync = require('../browserSync')
 
 /* $ gulp templates */
 gulp.task('templates', function () {
   return gulp.src(config.templates.paths.src + '/**/*.twig')
-    .pipe(twig({
-      data: {
-        title: 'Gulp and Twig',
-        benefits: [
-          'Fast',
-          'Flexible',
-          'Secure'
-        ]
-      }
-    }))
+    .pipe(twig())
     .pipe(gulp.dest(config.templates.paths.output))
+    .on('end', browserSync.reload)
 })
