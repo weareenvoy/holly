@@ -1,15 +1,16 @@
+{% import '../macros/render.twig' as render %}
 <!DOCTYPE html>
 <html>
   <head>
-    {% include '../partials/head.twig' %}
-    {% include '../partials/stylesheets.twig' %}
+    {{ render.partial('head') }}
+    {{ render.partial('stylesheets') }}
   </head>
   <body>
-    {% include '../partials/header.twig' %}
+    {{ render.partial('header') }}
 
     {% block content %}{% endblock %}
 
-    {% include '../partials/scripts.twig' %}
-    {% include '../partials/footer.twig' %}
+    {{ render.partial('scripts') }}
+    {{ render.partial('footer') }}
   </body>
 </html>
