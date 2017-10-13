@@ -1,3 +1,5 @@
+{% import './macros/render.twig' as render %}
+
 {% extends './layout/default.twig' %}
 
 {% block content %}
@@ -13,11 +15,17 @@
   <hr>
 
   <button id="btn-open-modal">Open Modal</button>
-  {% include '../js/components/Modal/modal.twig' with {
-    id: 'modal',
-    title: 'test',
-    options: {
-      triggerModalOpenSelector: '#btn-open-modal'
-    }
-  } only %}
+
+  {{
+    render.component(
+      'Modal/modal', {
+        id: 'modal',
+        title: 'test',
+        options: {
+          triggerModalOpenSelector: '#btn-open-modal'
+        }
+      }
+    )
+  }}
+
 {% endblock %}

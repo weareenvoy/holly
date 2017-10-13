@@ -1,7 +1,7 @@
-{% macro partial (templatePath, opts) %}
+{% macro partial (templatePath) %}
   {% include '../partials/' ~ templatePath ~ '.twig' %}
 {% endmacro %}
 
-{# {% macro component(componentPath, opts) %}
-  {% include 'component/' + componentPath + '.twig' %}
-{% endmacro %} #}
+{% macro component(templatePath, opts) %}
+  {% include '../../js/components/' ~ templatePath ~ '.twig' with opts %}
+{% endmacro %}
