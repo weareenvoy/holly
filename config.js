@@ -1,5 +1,4 @@
 /**
- * ./config.js
  * Build system configuration object. 
  * @author Keenan Staffieri
  */

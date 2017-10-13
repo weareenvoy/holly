@@ -1,9 +1,7 @@
 /**
- * ./buildsys/tasks/copy-assets.js
  * @author Keenan Staffieri
  * ------------------------------------
- * TASK: copy-assets
- * 'gulp copy-assets'
+ * TASK: Copy Assets
  */
 
 /* $ gulp copy-assets */

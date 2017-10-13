@@ -1,9 +1,7 @@
 /**
- * ./buildsys/tasks/scripts.js
  * @author Keenan Staffieri
  * ------------------------------------
  * TASK: Scripts
- * 'gulp scripts'
  */
 
 var runSequence = require('run-sequence')
@@ -29,7 +27,7 @@ gulp.task('scripts:lint', function () {
   return gulp.src(srcScriptsGlob)
     .pipe(standard())
     .pipe(standard.reporter('default', {
-      breakOnError: true
+      breakOnError: false
     }))
 })
 
@@ -42,7 +40,7 @@ gulp.task('scripts:compile', function () {
   })
 
   return b.transform(babelify.configure({
-      presets: [ 'env' ]
+      presets: ['env']
     }))
     .bundle()
     .pipe(source('./main.js'))

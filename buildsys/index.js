@@ -1,5 +1,4 @@
 /**
- * ./buildsys/index.js
  * Index of buildsys. Handles autoloading of all tasks and setting up environment.
  * @author Keenan Staffieri
  */

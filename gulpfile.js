@@ -2,9 +2,8 @@
   - - - - -
   H O L L Y
   - - - - -
-  ./gulpfile.js
-  ENVOY frontend Gulp build system and boilerplate.
-  @author ENVOY development team
+  ENVOYsites frontend Gulp build system and boilerplate.
+  @author ENVOY web development team
  */
 
 global.config = require('./config');

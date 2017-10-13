@@ -1,9 +1,7 @@
 /**
- * ./buildsys/tasks/init.js
  * @author Keenan Staffieri
  * ------------------------------------
  * TASK: Init
- * 'gulp init'
  */
 
 var inquirer = require('inquirer')

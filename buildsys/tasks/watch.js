@@ -1,9 +1,7 @@
 /**
- * ./buildsys/tasks/watch.js
  * @author Keenan Staffieri
  * ------------------------------------
  * TASK: Watch
- * 'gulp watch'
  */
 
 var runSequence = require('run-sequence')

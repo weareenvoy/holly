@@ -1,9 +1,7 @@
 /**
- * ./buildsys/tasks/rev.js
- * @author Scott Roach
+ * @author Keenan Staffieri
  * ------------------------------------
  * TASK: Rev
- * 'gulp rev'
  */
 
 var override = require('gulp-rev-css-url')

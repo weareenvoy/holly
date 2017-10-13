@@ -21,6 +21,7 @@
   "dependencies": {
     "autoprefixer": "^6.7.7",
     "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-preset-env": "^1.6.0",
     "babelify": "^7.3.0",
     "bourbon": "^4.3.4",
     "bourbon-neat": "^1.9.0",
@@ -41,13 +42,9 @@
     "gulp-uglify": "^2.1.2",
     "gulp-watch": "^4.3.11",
     "inquirer": "^3.3.0",
-    "lost": "^8.2.0",
     "normalize.css": "^5.0.0",
     "run-sequence": "^1.2.2",
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0"
-  },
-  "devDependencies": {
-    "babel-preset-env": "^1.6.0"
   }
 }

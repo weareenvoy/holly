@@ -1,9 +1,7 @@
 /**
- * ./buildsys/tasks/clean.js
- * @author Scott Roach
+ * @author Keenan Staffieri
  * ------------------------------------
  * TASK: Clean
- * 'gulp clean'
  */
 
 var del = require('del')
