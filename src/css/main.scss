@@ -17,6 +17,13 @@
 @import 'elements/code/sample-output';
 @import 'elements/code/user-input';
 @import 'elements/code/variable';
+@import 'elements/tables';
+@import 'elements/controls/checkbox';
+@import 'elements/controls/input';
+@import 'elements/controls/label';
+@import 'elements/controls/radio';
+@import 'elements/controls/select';
+@import 'elements/controls/textarea';
 
 body {
   color: $font-color-base;
@@ -129,48 +136,48 @@ samp { @include sample-output; }
 /* -------------------------------------------------------- */
 
 // --- Basic ----------------------------------------------
-// table.table { @include table; }
+table.table { @include table; }
 
 // --- Striped --------------------------------------------
-// table.table--striped { @include table('striped'); }
+table.table--striped { @include table-striped; }
 
 // --- Bordered -------------------------------------------
-// table.table--bordered { @include table('bordered'); }
+table.table--bordered { @include table-bordered; }
 
 // --- Hover ----------------------------------------------
-// table.table--hover { @include table('hover'); }
+table.table--hover { @include table-hover; }
 
 // --- Condensed ------------------------------------------
-// table.table--condensed { @include table('condensed'); }
+table.table--condensed { @include table-condensed; }
 
 /* -------------------------------------------------------- */
 /* --- CONTROLS ------------------------------------------- */
 /* -------------------------------------------------------- */
 
 // --- All Inputs -----------------------------------------
-// input { @include input; }
+input { @include input; }
 
 // --- Text Input -----------------------------------------
-// input[type='text'],
-// input[type='password'] { @include input-text; }
+input[type='text'],
+input[type='password'] { @include input-text; }
 
 // --- Number Input ---------------------------------------
-// input[type='number'] { @include input-number; }
+input[type='number'] { @include input-number; }
 
 // --- Textarea -------------------------------------------
-// textarea { @include textarea; }
+textarea { @include textarea; }
 
 // --- Label ----------------------------------------------
-// label { @include label; }
+label { @include label; }
 
 // --- Checkbox -------------------------------------------
-// .checkbox         { @include checkbox; }
-// .checkbox--inline { @include checkbox('inline'); }
+input[type='checkbox']                  { @include checkbox; }
+input[type='checkbox'].checkbox--inline { @include checkbox('inline'); }
 
 // --- Radio ----------------------------------------------
-// input[type='radio']               { @include radio; }
-// input[type='radio'].radio--inline { @include radio('inline'); }
+input[type='radio']               { @include radio; }
+input[type='radio'].radio--inline { @include radio('inline'); }
 
 // --- Select ---------------------------------------------
-// select                  { @include select; }
-// select[multiple].select { @include select('multiple'); }
+select                  { @include select; }
+select[multiple].select { @include select('multiple'); }

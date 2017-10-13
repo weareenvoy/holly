@@ -1,0 +1,23 @@
+// -------------------------- Shared all tables <table>
+@mixin table {
+}
+
+// -------------------------- Striped Table <table.table--striped>
+@mixin table-striped {
+  @include table;
+}
+
+// -------------------------- Bordered Table <table.table--bordered>
+@mixin table-bordered {
+  @include table;
+}
+
+// -------------------------- Hover Table <table.table--hover>
+@mixin table-hover {
+  @include table;
+}
+
+// -------------------------- Condensed Table <table.table--condensed>
+@mixin table-condensed {
+  @include table;
+}

@@ -1,0 +1,13 @@
+// -------------------------- Shared all inputs <input>
+@mixin input {
+}
+
+// -------------------------- Text Input <input[type='text']> and <input[type='password']>
+@mixin input-text {
+  @include input;
+}
+
+// -------------------------- Number Input <input[type='number']>
+@mixin input-number {
+  @include input;
+}
