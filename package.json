@@ -20,11 +20,9 @@
   "homepage": "https://github.com/weareenvoy/holly#readme",
   "dependencies": {
     "autoprefixer": "^6.7.7",
-    "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-preset-env": "^1.6.0",
     "babelify": "^7.3.0",
     "bourbon": "^4.3.4",
-    "bourbon-neat": "^1.9.0",
     "browser-sync": "^2.18.13",
     "browserify": "^14.4.0",
     "cssnano": "^3.10.0",
