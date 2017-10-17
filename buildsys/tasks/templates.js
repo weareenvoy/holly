@@ -17,6 +17,12 @@ gulp.task('templates', function () {
   ]
   return gulp.src(glob)
     .pipe(twig())
+    .on('error', swallowError)
     .pipe(gulp.dest(config.templates.paths.output))
     .on('end', browserSync.reload)
 })
+
+function swallowError (error) {
+  console.log(error.toString())
+  this.emit('end')
+}
