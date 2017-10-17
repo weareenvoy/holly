@@ -3,13 +3,13 @@
  * @author Keenan Staffieri
  */
 
-const taskList = []
+var taskList = []
 
 if (config.runStandalone) {
   taskList.push('clean')
 }
 
-const buildTasks = [
+var buildTasks = [
   'styles',
   'scripts',
   'copy-assets'
@@ -31,17 +31,3 @@ if (config.runStandalone && env === 'dev') {
 }
 
 module.exports = taskList
-
-// module.exports = [
-//   'clean', // TODO: Do not clean if not static
-//   [
-//     'styles',
-//     'scripts',
-//     'copy-assets',
-
-//     // TODO: Refactor, added for static builds...
-//     'templates',
-//     'serve'
-//   ],
-//   'rev'
-// ]

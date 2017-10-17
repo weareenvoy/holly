@@ -30,7 +30,7 @@ global.gulp = gulp
 var tasks = fs.readdirSync(__dirname + '/tasks/')
 tasks.forEach(function (task) {
   if (/\.js/.test(task)) {
-    console.log(`holly: requiring task ${task}...`)
+    console.log(`${config.buildName}: requiring task ${task}...`)
     require(`./tasks/${task}`)
   }
 })
@@ -39,16 +39,9 @@ tasks.forEach(function (task) {
  * Require default gulp commands
  */
 var taskList = require('./default-tasks')
-// Run default gulp task for development mode
-if (mode === 'local-dev') {
-  var runSequence = require('run-sequence')
+var runSequence = require('run-sequence')
 
-  console.log('taskList: ', taskList)
-
-  /* --- $ gulp --- */
-  gulp.task('default', function (cb) {
-    return runSequence.apply(null, taskList)
-  })
-}
-
-global.taskList = taskList
+/* --- $ gulp --- */
+gulp.task('default', function () {
+  return runSequence.apply(null, taskList)
+})

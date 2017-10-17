@@ -6,14 +6,17 @@
 var srcRoot = './src'
 var distRoot = './dist'
 var docRoot = '/dist/'
+var testRoot = './test'
 
 module.exports = {
+  buildName: 'holly',
   runStandalone: true, // if 'true', static website w/ local dev server
   paths: {
     hollyRoot: __dirname,
     srcRoot: srcRoot,
     distRoot: distRoot,
-    distDocRoot: docRoot
+    distDocRoot: docRoot,
+    testRoot: testRoot
   },
   templates: {
     paths: {

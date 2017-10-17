@@ -24,29 +24,16 @@ gulp.task('init', function () {
     },
     {
       type: 'confirm',
-      name: 'hasSASS',
-      message: 'Will this project require SASS compilation?'
-    },
-    {
-      type: 'confirm',
-      name: 'hasBabel',
-      message: 'Will this project require Babel (ES2015) compilation?'
-    },
-    {
-      type: 'confirm',
       name: 'proceed',
       message: function (answers) {
         var confirmMsg = 'Boilerplate files to help jumpstart your development will be copied to the project root:\n'
-        if (answers.hasSASS) {
-          confirmMsg += config.styles.paths.src + '\n'
-        }
-        if (answers.hasBabel) {
-          confirmMsg += config.scripts.paths.src + '\n'
+        confirmMsg += config.styles.paths.src + '\n'
+        confirmMsg += config.scripts.paths.src + '\n'
+        confirmMsg += config.components.paths.src + '\n'
+        if (config.runStandalone) {
+          confirmMsg += config.templates.paths.src + '\n'
         }
         return confirmMsg + 'Would you like to continue?'
-      },
-      when: function (answers) {
-        return answers.hasSASS || answers.hasBabel
       }
     }
   ]).then(function (answers) {
@@ -59,9 +46,11 @@ gulp.task('init', function () {
 
       var hollyRootPath = (config.runStandalone) ? config.paths.hollyRoot : baseConfig.paths.hollyRoot
 
-      return gulp.src(hollyRootPath + '/templates/src/**/*')
+      var destRoot = (mode == 'local-dev') ? config.paths.testRoot : config.paths.srcRoot
+
+      return gulp.src(hollyRootPath + '/src/**/*')
         .pipe(batchReplace(replaceProps))
-        .pipe(gulp.dest(config.paths.srcRoot))
+        .pipe(gulp.dest(destRoot))
     } else {
       console.log('Nothing to scaffold, exiting project init flow.')
     }
