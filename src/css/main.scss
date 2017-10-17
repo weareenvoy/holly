@@ -1,29 +1,11 @@
+/* import reset and utils */
 @import 'reset';
 @import 'mixins';
-@import 'theme/base/colors';
-@import 'theme/base/fonts';
-@import 'elements/typography/headings';
-@import 'elements/typography/body-copy';
-@import 'elements/typography/links';
-@import 'elements/typography/inline-text-elements';
-@import 'elements/typography/address';
-@import 'elements/typography/blockquote';
-@import 'elements/lists/lists';
-@import 'elements/lists/description';
-@import 'elements/dividers/dividers';
-@import 'elements/buttons/buttons';
-@import 'elements/code/block';
-@import 'elements/code/inline';
-@import 'elements/code/sample-output';
-@import 'elements/code/user-input';
-@import 'elements/code/variable';
-@import 'elements/tables/tables';
-@import 'elements/controls/checkbox';
-@import 'elements/controls/input';
-@import 'elements/controls/label';
-@import 'elements/controls/radio';
-@import 'elements/controls/select';
-@import 'elements/controls/textarea';
+
+/* import theme */
+@import 'theme/base/_include';
+
+/* import components styles */
 @import '../components/Modal/modal';
 
 body {
@@ -36,13 +18,6 @@ body {
     @include font-aa;
   }
 }
-
-button {
-  color: black;
-  background-color: white;
-}
-
-// -----------------------
 
 /* -------------------------------------------------------- */
 /* --- TYPOGRAPHY ----------------------------------------- */
