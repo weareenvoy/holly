@@ -20,7 +20,7 @@ var fs = require('fs')
 var prjPath = '../..'
 
 // Scaffold initial gulpfile
-fs.readFile('./gulpfile.js', 'utf8', function (err, data) {
+fs.readFile('./templates/gulpfile.tpl.js', 'utf8', function (err, data) {
 
   if (err) return console.error(err)
 
