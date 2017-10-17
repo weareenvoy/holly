@@ -10,7 +10,7 @@ To get **holly** set up on your static web project, we recommend that NPM 5 or g
 
 1. Now, open the terminal and `cd` to your project's root directory and install **holly**.
 
-        npm install envoy-holly
+        npm install envoy-holly --save-dev
 
 2. After successful installation, a `gulpfile.js` should automatically be generated at your project's root directory. 
 
