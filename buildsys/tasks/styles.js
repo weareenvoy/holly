@@ -21,10 +21,7 @@ gulp.task('styles', function () {
   if (env === 'prod') {
     processors.push(cssnano)
   }
-  return gulp.src([
-      config.styles.paths.src + '/**/*.{scss,sass}',
-      config.components.paths.src + '/**/*.{scss,sass}'
-    ])
+  return gulp.src(config.styles.paths.src + '/**/*.{scss,sass}')
     .pipe(gulpif((env === 'dev'), sourcemaps.init()))
     .pipe(sass())
     .on('error', swallowError)
