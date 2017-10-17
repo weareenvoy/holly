@@ -24,7 +24,10 @@ if (config.runStandalone) {
 }
 
 taskList.push(buildTasks)
-taskList.push('rev')
+
+if (env === 'prod') {
+  taskList.push('rev')
+}
 
 if (config.runStandalone && env === 'dev') {
   taskList.push('watch')
