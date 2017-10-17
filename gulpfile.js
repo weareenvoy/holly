@@ -23,5 +23,5 @@
   - improve readme
  */
 
-global.config = require('./config');
+global.config = require('./config')
 require('./buildsys')

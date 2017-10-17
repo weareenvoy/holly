@@ -17,10 +17,9 @@ var argv = require('yargs').argv
 global.env = argv.prod ? 'prod' : 'dev'
 
 // Set build system mode
+// Local Dev: working on the build system itself
+// Normal: working on a project, holly is installed as an npm package
 global.mode = argv['local-dev'] ? 'local-dev' : 'normal'
-
-// Are we running the build system without a child package?
-global.standalone = argv.standalone
 
 // Make gulp globally accessible
 global.gulp = gulp
@@ -44,10 +43,7 @@ var taskList = require('./default-tasks')
 if (mode === 'local-dev') {
   var runSequence = require('run-sequence')
 
-  // Append 'watch' task for dev env
-  if (standalone && env === 'dev') {
-    taskList.push('watch')
-  }
+  console.log('taskList: ', taskList)
 
   /* --- $ gulp --- */
   gulp.task('default', function (cb) {

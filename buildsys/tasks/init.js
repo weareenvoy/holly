@@ -57,7 +57,7 @@ gulp.task('init', function () {
         ['<%= PROJECT_NAME =%>', answers.projectName]
       ]
 
-      var hollyRootPath = (standalone) ? config.paths.hollyRoot : baseConfig.paths.hollyRoot
+      var hollyRootPath = (config.runStandalone) ? config.paths.hollyRoot : baseConfig.paths.hollyRoot
 
       return gulp.src(hollyRootPath + '/templates/src/**/*')
         .pipe(batchReplace(replaceProps))

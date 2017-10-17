@@ -8,6 +8,7 @@ var distRoot = './dist'
 var docRoot = '/dist/'
 
 module.exports = {
+  runStandalone: true, // if 'true', static website w/ local dev server
   paths: {
     hollyRoot: __dirname,
     srcRoot: srcRoot,
