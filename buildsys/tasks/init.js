@@ -44,11 +44,9 @@ gulp.task('init', function () {
         ['<%= PROJECT_NAME =%>', answers.projectName]
       ]
 
-      var hollyRootPath = (config.runStandalone) ? config.paths.hollyRoot : baseConfig.paths.hollyRoot
+      var destRoot = (mode == 'local-dev') ? config.paths.testRoot + '/src' : config.paths.srcRoot
 
-      var destRoot = (mode == 'local-dev') ? config.paths.testRoot : config.paths.srcRoot
-
-      return gulp.src(hollyRootPath + '/src/**/*')
+      return gulp.src(config.paths.hollyRoot + '/src/**/*')
         .pipe(batchReplace(replaceProps))
         .pipe(gulp.dest(destRoot))
     } else {

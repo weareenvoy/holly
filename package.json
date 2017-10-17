@@ -2,10 +2,12 @@
   "name": "envoy-holly",
   "version": "0.1.1",
   "description": "ENVOYsites Gulp build system and boilerplate.",
+  "main": "gulpfile.js",
   "scripts": {
     "init": "gulp init --local-dev",
     "dev": "gulp --local-dev",
     "build": "gulp --local-dev --prod",
+    "postinstall": "node install.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
