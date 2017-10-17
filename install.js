@@ -1,6 +1,5 @@
 /**
   Running TODO List:
-  - add gulp notification util on error
   - add prettier?
   - add image / svg sprite optimization
   - make better way to extend / override config
