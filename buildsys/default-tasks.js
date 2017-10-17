@@ -17,16 +17,15 @@ var buildTasks = [
 
 if (config.runStandalone) {
   buildTasks.push('templates')
-
-  if (env === 'dev') {
-    buildTasks.push('serve')
-  }
 }
 
 taskList.push(buildTasks)
 
 if (env === 'prod') {
   taskList.push('rev')
+}
+else {
+  taskList.push('serve')
 }
 
 if (config.runStandalone && env === 'dev') {

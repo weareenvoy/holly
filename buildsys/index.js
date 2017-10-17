@@ -5,6 +5,7 @@
 
 var gulp = require('gulp')
 var fs = require('fs')
+var logger = require('./utils/Logger')
 
 // Grab command line arguments
 var argv = require('yargs').argv
@@ -24,13 +25,16 @@ global.mode = argv['local-dev'] ? 'local-dev' : 'normal'
 // Make gulp globally accessible
 global.gulp = gulp
 
+logger.banner('starting holly build...')
+logger.logValue('build mode', env)
+
 /**
  * Require all gulp tasks...
  */
 var tasks = fs.readdirSync(__dirname + '/tasks/')
 tasks.forEach(function (task) {
   if (/\.js/.test(task)) {
-    console.log(`${config.buildName}: requiring task ${task}...`)
+    logger.info(`${config.buildName}: requiring task ${task}...`)
     require(`./tasks/${task}`)
   }
 })
