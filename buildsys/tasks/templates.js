@@ -5,6 +5,7 @@
  */
 
 var twig = require('gulp-twig')
+var notify = require('gulp-notify')
 var browserSync = require('../browserSync').server
 
 /* $ gulp templates */
@@ -24,5 +25,6 @@ gulp.task('templates', function () {
 
 function swallowError (error) {
   console.log(error.toString())
+  notify.onError({ title: 'Twig Error', message: 'Sloopy! Messed up your Twig template!' })(error)
   this.emit('end')
 }
