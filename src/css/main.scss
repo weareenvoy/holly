@@ -1,9 +1,21 @@
+/**
+ * <%= PROJECT_NAME =%>
+ * Main stylesheet. 
+ */
+
 /* import reset and utils */
 @import 'reset';
 @import 'mixins';
 
 /* import theme */
 @import 'theme/base/_include';
+
+/* import grid */
+@import 'grid/grid';
+
+/* import partials */
+@import 'partials/header';
+@import 'partials/footer';
 
 /* import components styles */
 @import '../components/Modal/modal';

@@ -1,0 +1,9 @@
+$ns: '.header';
+
+#{$ns} {
+  display: flex;
+  position: fixed;
+  padding: 30px;
+  width: 100%;
+  background-color: black;
+}
