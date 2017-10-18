@@ -1,7 +1,7 @@
 {% set ns = 'footer' %}
 
 <footer class="{{ns}}">
-  <div class="grid-container">
-    <small>Page Footer</small>
-  </div>
+  <div class="{{ns}}__container grid-container">
+    <small>&copy; Copyright {{ 'now'|date('Y') }} ENVOY | <a href="https://www.weareenvoy.com" target="_blank">www.weareenvoy.com</a></small>
+  </div> {# __container #}
 </footer> {# .footer #}

@@ -1,5 +1,11 @@
 // -------------------------- Inline Link <a>
 @mixin inline-link {
-  color: cyan;
+  color: $fontColor-links;
   text-decoration: none;
+  border-bottom: 1px solid color($fontColor-links tint(50%));
+  transition: color 200ms ease;
+
+  &:hover {
+    color: color($fontColor-links tint(50%));
+  }
 }

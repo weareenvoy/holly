@@ -21,12 +21,12 @@
 @import '../components/Modal/modal';
 
 body {
-  color: $font-color-base;
-  font-family: $font-family-base;
-  font-size: $font-size-default;
-  background-color: $page-bg-color;
+  color: $fontColor-base;
+  font-family: $fontFamily-base;
+  font-size: $fontSize-default;
+  background: $pageBg;
 
-  @if $font-smoothing-default {
+  @if $fontSmoothing-default {
     @include font-aa;
   }
 }

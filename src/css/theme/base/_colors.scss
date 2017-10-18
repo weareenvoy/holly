@@ -1,11 +1,19 @@
-// Gray
-$gray-lightest: #f6f6f6;
-$gray-lighter: #eee;
+/* ------ colors ------ */
+$black: #000;
+$black-near: #1C1D1E;
+$white: #fff;
+
+/* Grays */
+$gray-lightest: #f3f3f3;
+$gray-lighter: #fefefe;
 $gray-light: #ccc;
-$gray: #666;
+$gray: #565a5C;
 $gray-dark: #333;
 $gray-darker: #222;
 $gray-darkest: #1a1a1a;
 
-$font-color-base: $gray-lightest;
-$page-bg-color: $gray-darkest;
+/* ------ defaults ------ */
+$fontColor-base:     $gray;
+$fontColor-links:    $gray;
+$fontColor-headings: $black-near;
+$pageBg:             $gray-lightest;

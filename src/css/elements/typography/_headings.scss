@@ -1,7 +1,7 @@
 // -------------------------- Shared all headings <h1>-<h6>
 @mixin heading {
   @include optimizeLegibility;
-  font-family: $font-family-headings;
+  font-family: $fontFamily-headings;
 }
 
 // -------------------------- Heading 1 <h1>

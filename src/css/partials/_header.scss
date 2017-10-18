@@ -2,16 +2,53 @@ $ns: '.header';
 
 #{$ns} {
   position: fixed;
-  padding: 30px 0;
-  width: 100%;
+  size: 100% 80px;
   background-color: black;
 
   &__container {
     display: flex;
+    height: 100%;
   }
 
   &__title {
+    display: flex;
+    align-items: center;
+    padding-right: 20px;
     margin: 0;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 1px;
     user-select: none;
+
+    a,
+    a:hover {
+      color: $white;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+  }
+
+  &__nav-item {
+    display: inline-block;
+
+    a {
+      padding: 30px 20px;
+      color: $gray-light;
+      font-weight: 500;
+      letter-spacing: 1px;
+      transition: background-color 200ms ease;
+    }
+
+    a:hover {
+      color: $white;
+      background-color: $gray-darker;
+    }
+  }
+
+  a {
+    border: 0;
   }
 }
