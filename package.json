@@ -27,6 +27,7 @@
     "bourbon": "^4.3.4",
     "browser-sync": "^2.18.13",
     "browserify": "^14.4.0",
+    "css-mqpacker": "^6.0.1",
     "cssnano": "^3.10.0",
     "del": "^2.2.2",
     "gulp": "^3.9.1",
@@ -47,6 +48,10 @@
     "inquirer": "^3.3.0",
     "jquery": "^3.2.1",
     "normalize.css": "^5.0.0",
+    "postcss-color-function": "^4.0.0",
+    "postcss-position": "^1.0.0",
+    "postcss-responsive-type": "^1.0.0",
+    "postcss-size": "^2.0.0",
     "run-sequence": "^1.2.2",
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0"

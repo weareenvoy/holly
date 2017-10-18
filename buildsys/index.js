@@ -28,6 +28,10 @@ global.gulp = gulp
 logger.banner('starting holly build...')
 logger.logValue('build mode', env)
 
+if (config.runStandalone) {
+  logger.log('Configured for standalone static website.')
+}
+
 /**
  * Require all gulp tasks...
  */

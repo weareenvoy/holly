@@ -7,6 +7,11 @@
 var postcss = require('gulp-postcss')
 var sass = require('gulp-sass')
 var autoprefixer = require('autoprefixer')
+var colorFunction = require('postcss-color-function')
+var mqpacker = require('css-mqpacker')
+var size = require('postcss-size')
+var position = require('postcss-position')
+var responsiveType = require('postcss-responsive-type')
 var cssnano = require('cssnano')
 var sourcemaps = require('gulp-sourcemaps')
 var gulpif = require('gulp-if')
@@ -16,9 +21,14 @@ var browserSync = require('../browserSync').server
 /* $ gulp styles */
 gulp.task('styles', function () {
   var processors = [
-    autoprefixer
+    autoprefixer,
+    colorFunction(),
+    position,
+    size,
+    responsiveType
   ]
   if (env === 'prod') {
+    processors.push(mqpacker())
     processors.push(cssnano)
   }
   return gulp.src(config.styles.paths.src + '/**/*.{scss,sass}')

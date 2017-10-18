@@ -1,6 +1,7 @@
 /**
   Running TODO List:
   - add prettier?
+  - css linter?
   - add image / svg sprite optimization
   - make better way to extend / override config
   - create initial single styleguide page with all the base elements

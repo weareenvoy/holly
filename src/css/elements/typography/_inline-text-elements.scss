@@ -46,7 +46,7 @@
 // -------------------------- Abbreviated Text <abbr>
 @mixin abbreviated-text {
   text-decoration: none;
-  border-bottom: 2px solid color('gray-s2');
+  border-bottom: 2px solid #333;
   cursor: help;
 }
 
