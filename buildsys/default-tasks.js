@@ -23,6 +23,7 @@ taskList.push(buildTasks)
 
 if (env === 'prod') {
   taskList.push('rev')
+  taskList.push('rev:replace')
 }
 else {
   taskList.push('serve')

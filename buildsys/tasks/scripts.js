@@ -14,6 +14,7 @@ var browserify = require('browserify')
 var source = require('vinyl-source-stream')
 var buffer = require('vinyl-buffer')
 var notify = require('gulp-notify')
+var rev = require('gulp-rev')
 var browserSync = require('../browserSync').server
 
 var srcScriptsGlob = [
@@ -49,9 +50,12 @@ gulp.task('scripts:compile', function () {
     .pipe(source('./main.js'))
     .pipe(buffer())
     .pipe(gulpif((env === 'dev'), sourcemaps.init()))
+    .pipe(gulpif((env === 'prod'), rev()))
     .pipe(gulpif((env === 'prod'), uglify()))
     .pipe(gulpif((env === 'dev'), sourcemaps.write()))
     .pipe(gulp.dest(config.scripts.paths.output))
+    .pipe(gulpif((env === 'prod'), rev.manifest({ path: 'rev-manifest-js.json' })))
+    .pipe(gulpif((env === 'prod'), gulp.dest(config.paths.distRoot)))
     .on('end', browserSync.reload)
 })
 

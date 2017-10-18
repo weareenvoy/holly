@@ -4,6 +4,7 @@ $ns: '.modal';
   display: none;
   position: fixed 0;
   size: 100%;
+  background: url('../assets/svr-logo.png');
   z-index: 1000;
 
   &--opened {
