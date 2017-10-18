@@ -15,18 +15,18 @@ gulp.task('rev', function () {
     .pipe(rev())
     .pipe(override())
     .pipe(gulp.dest(config.paths.distRoot))
-    .pipe(rev.manifest())
+    .pipe(rev.manifest({ path: 'rev-manifest-css-assets.json' }))
     // .pipe(replace(/(\s)\"/g, '$1"' + config.paths.distDocRoot)) // for Craft?
     .pipe(gulp.dest(config.paths.distRoot))
 })
 
 /* $ gulp rev:replace */
 gulp.task('rev:replace', function () {
-  var manifest = gulp.src(config.paths.distRoot + '/rev-manifest.json')
+  var manifestCssAssets = gulp.src(config.paths.distRoot + '/rev-manifest-css-assets.json')
   var manifestJs = gulp.src(config.paths.distRoot + '/rev-manifest-js.json')
 
   return gulp.src(config.paths.distRoot + '/**')
-    .pipe(revReplace({ manifest: manifest }))
+    .pipe(revReplace({ manifest: manifestCssAssets }))
     .pipe(revReplace({ manifest: manifestJs }))
     .pipe(gulp.dest(config.paths.distRoot))
 })
