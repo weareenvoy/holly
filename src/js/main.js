@@ -5,4 +5,5 @@
 
 import { Modal } from '../components/Modal/Modal'
 
-new Modal() // eslint-disable-line
+new Modal('modal-1') // eslint-disable-line
+new Modal('modal-2') // eslint-disable-line

@@ -1,3 +1,16 @@
 // -------------------------- Button <button> and <*.btn>
 @mixin btn {
+  padding: 15px 20px;
+  color: $white;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  background-color: $gray-darkest;
+  border: 0;
+  cursor: pointer;
+  transition: background-color 200ms ease;
+
+  &:hover {
+    background-color: $gray;
+  }
 }

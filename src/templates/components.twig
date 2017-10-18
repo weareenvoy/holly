@@ -6,15 +6,28 @@
 <div class="page-wrapper">
   <div class="grid-container">
     <h2>Modal</h2>
-    <button id="btn-open-modal">Open Modal</button>
+    <button id="btn-open-modal">Open Modal 1</button>
+    <button id="btn-open-modal-2">Open Modal 2</button>
 
     {{
       render.component(
         'Modal/modal', {
-          id: 'modal',
-          title: 'test',
+          id: 'modal-1',
+          title: 'Modal 1',
           options: {
             triggerModalOpenSelector: '#btn-open-modal'
+          }
+        }
+      )
+    }}
+
+    {{
+      render.component(
+        'Modal/modal', {
+          id: 'modal-2',
+          title: 'Modal 2',
+          options: {
+            triggerModalOpenSelector: '#btn-open-modal-2'
           }
         }
       )

@@ -2,8 +2,8 @@ import { Component } from '../Component'
 import $ from 'jquery'
 
 export class Modal extends Component {
-  constructor () {
-    super('modal')
+  constructor (id) {
+    super('modal', id)
     this.$overlay = this.getElement('overlay')
 
     // Bind click event to trigger modal selector

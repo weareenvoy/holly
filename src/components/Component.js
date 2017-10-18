@@ -1,9 +1,14 @@
 import $ from 'jquery'
 
 export class Component {
-  constructor (ns) {
+  constructor (ns, id) {
     this.ns = ns
-    this.$self = $('.' + this.ns)
+    if (!id) {
+      console.error(`ID is required for '${ns}' component.`)
+      return false
+    }
+    this.id = id
+    this.$self = $(`#${this.id}.${this.ns}`)
     this.options = this.getData('options')
   }
 

@@ -11,7 +11,10 @@ var watch = require('gulp-watch')
 gulp.task('watch', function () {
 
   // Watch for template changes
-  watch(config.templates.paths.src + '/**/*.twig', {
+  watch([
+    config.templates.paths.src + '/**/*.twig',
+    config.components.paths.src + '/**/*.twig'
+  ], {
     name: 'Templates Watcher'
   }, function () {
     gulp.start('templates')
