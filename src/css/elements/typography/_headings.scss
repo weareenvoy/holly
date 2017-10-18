@@ -7,21 +7,21 @@
 // -------------------------- Heading 1 <h1>
 @mixin heading-1 {
   @include heading;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
   font-size: 50px;
 }
 
 // -------------------------- Heading 2 <h2>
 @mixin heading-2 {
   @include heading;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   font-size: 40px;
 }
 
 // -------------------------- Heading 3 <h3>
 @mixin heading-3 {
   @include heading;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   font-size: 30px;
 }
 
