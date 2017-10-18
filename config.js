@@ -11,6 +11,10 @@ var testRoot = './test'
 module.exports = {
   buildName: 'holly',
   runStandalone: true, // if 'true', static website w/ local dev server
+  browserSync: {
+    port: 8000,
+    openOnStart: false
+  },
   paths: {
     hollyRoot: __dirname,
     srcRoot: srcRoot,
