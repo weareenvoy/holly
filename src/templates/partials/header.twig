@@ -1,15 +1,19 @@
 {% set ns = 'header' %}
 
 <header class="{{ns}}">
-  <h1>Holly</h1>
-  <nav class="{{ns}}__nav">
-    <ul class="{{ns}}__nav-list">
-      <li class="{{ns}}__nav-list-item">
-        <a href="/">Home</a>
-      </li>
-      <li class="{{ns}}__nav-list-item">
-        <a href="/components.html">Components</a>
-      </li>
-    </ul> {# __nav-list #}
-  </nav> {# __nav #}
+  <div class="{{ns}}__container grid-container">
+    <h1 class="{{ns}}__title">
+      <a href="/">Holly</a>
+    </h1>
+    <nav class="{{ns}}__nav">
+      <ul class="{{ns}}__nav-list">
+        <li class="{{ns}}__nav-list-item">
+          <a href="/">Home</a>
+        </li>
+        <li class="{{ns}}__nav-list-item">
+          <a href="/components.html">Components</a>
+        </li>
+      </ul> {# __nav-list #}
+    </nav> {# __nav #}
+  </div> {# __container #}
 </header> {# .header #}

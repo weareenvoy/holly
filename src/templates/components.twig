@@ -1,22 +1,25 @@
 {% import './macros/render.twig' as render %}
-
 {% extends './layout/default.twig' %}
 
 {% block content %}
 
-<h2>Modal</h2>
-<button id="btn-open-modal">Open Modal</button>
+<div class="page-wrapper">
+  <div class="grid-container">
+    <h2>Modal</h2>
+    <button id="btn-open-modal">Open Modal</button>
 
-{{
-  render.component(
-    'Modal/modal', {
-      id: 'modal',
-      title: 'test',
-      options: {
-        triggerModalOpenSelector: '#btn-open-modal'
-      }
-    }
-  )
-}}
+    {{
+      render.component(
+        'Modal/modal', {
+          id: 'modal',
+          title: 'test',
+          options: {
+            triggerModalOpenSelector: '#btn-open-modal'
+          }
+        }
+      )
+    }}
+  </div> {# .grid-container #}
+</div> {# .page-wrapper #}
 
 {% endblock %}
