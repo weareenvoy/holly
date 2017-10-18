@@ -22,13 +22,20 @@ $ns: '.modal';
 
   &__box {
     position: relative;
-    padding: 30px;
+    padding: 40px;
+    max-width: 80%;
     color: black;
     background-color: white;
     z-index: 10;
+  }
 
-    h1 {
-      font-size: responsive 12px 60px;
-    }
+  &__title {
+    font-size: responsive 24px 60px;
+  }
+
+  &__content,
+  &__content p {
+    font-size: responsive 14px 18px;
+    line-height: responsive 20px 26px;
   }
 }

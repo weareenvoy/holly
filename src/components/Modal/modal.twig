@@ -9,7 +9,13 @@
 
 <div id="{{ id }}" class="{{ns}}" data-options="{{ options|json_encode|escape }}">
   <div class="{{ns}}__box">
-    <h2 class="{{ns}}__title">{{ title }}</h2>
+    {% if title is defined %}
+      <h2 class="{{ns}}__title">{{ title }}</h2>
+    {% endif %}
+
+    {% if content is defined %}
+      <div class="{{ns}}__content">{{ content }}</div>
+    {% endif %}
   </div>
   <div class="{{ns}}__overlay"></div>
 </div>

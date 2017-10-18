@@ -36,6 +36,7 @@ gulp.task('styles', function () {
     .pipe(sass())
     .on('error', swallowError)
     .pipe(postcss(processors))
+    .on('error', swallowError)
     .pipe(gulpif((env === 'dev'), sourcemaps.write()))
     .pipe(gulp.dest(config.styles.paths.output))
     .pipe(browserSync.stream())
