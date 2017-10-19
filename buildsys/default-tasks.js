@@ -22,15 +22,10 @@ if (config.runStandalone) {
 taskList.push(buildTasks)
 
 if (env === 'prod') {
-  taskList.push('rev')
-  taskList.push('rev:replace')
+  taskList.push('rev', 'rev:replace')
 }
 else {
-  taskList.push('serve')
-}
-
-if (config.runStandalone && env === 'dev') {
-  taskList.push('watch')
+  taskList.push('serve', 'watch')
 }
 
 module.exports = taskList
