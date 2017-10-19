@@ -1,5 +1,7 @@
 /**
   Running TODO List:
+  - add capability to add multiple js entry points
+  - add macro to handle required fields for twig templates
   - add prettier?
   - css linter?
   - add image / svg sprite optimization
@@ -7,11 +9,9 @@
   - create initial single styleguide page with all the base elements
   - add scaffolding / make commands to add new components or install existing ones
   - improve readme
-  - test prod settings
  */
 
 var fs = require('fs')
-
 var prjPath = '../..'
 
 // Scaffold initial gulpfile
