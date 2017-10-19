@@ -54,8 +54,7 @@ gulp.task('init', function () {
 
       var destRoot = (mode == 'local-dev') ? config.paths.testRoot + '/src' : config.paths.srcRoot
 
-      // return gulp.src(config.paths.hollyRoot + '/src/**/*')
-      return gulp.src(srcPaths, { base: config.paths.srcRoot })
+      return gulp.src(srcPaths, { base: config.paths.hollyRoot + '/src' })
         .pipe(batchReplace(replaceProps))
         .pipe(gulp.dest(destRoot))
     } else {
