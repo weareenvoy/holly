@@ -6,7 +6,6 @@
 
 var inquirer = require('inquirer')
 var batchReplace = require('gulp-batch-replace')
-var filter = require('gulp-filter')
 var srcPaths = []
 
 /* $ gulp init */
@@ -33,14 +32,14 @@ gulp.task('init', function () {
         confirmMsg += config.scripts.paths.src + '\n'
         confirmMsg += config.components.paths.src + '\n'
         srcPaths.push(
-          '*src/assets/**/*',
-          '*src/css/**/*',
-          '*src/js/**/*',
-          '*src/components/**/*'
+          config.paths.hollyRoot + '/src/assets/**/*',
+          config.paths.hollyRoot + '/src/css/**/*',
+          config.paths.hollyRoot + '/src/js/**/*',
+          config.paths.hollyRoot + '/src/components/**/*'
         )
         if (config.runStandalone) {
           confirmMsg += config.templates.paths.src + '\n'
-          srcPaths.push('*src/templates/**/*')
+          srcPaths.push(config.paths.hollyRoot + '/src/templates/**/*')
         }
         return confirmMsg + 'Would you like to continue?'
       }
@@ -54,10 +53,9 @@ gulp.task('init', function () {
       ]
 
       var destRoot = (mode == 'local-dev') ? config.paths.testRoot + '/src' : config.paths.srcRoot
-      var srcFilter = filter(srcPaths)
 
-      return gulp.src(config.paths.hollyRoot + '/src/**/*')
-        .pipe(srcFilter)
+      // return gulp.src(config.paths.hollyRoot + '/src/**/*')
+      return gulp.src(srcPaths, { base: config.paths.srcRoot })
         .pipe(batchReplace(replaceProps))
         .pipe(gulp.dest(destRoot))
     } else {
