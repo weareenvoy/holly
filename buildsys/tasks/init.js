@@ -6,10 +6,11 @@
 
 var inquirer = require('inquirer')
 var batchReplace = require('gulp-batch-replace')
+var filter = require('gulp-filter')
+var srcPaths = []
 
 /* $ gulp init */
 gulp.task('init', function () {
-
   return inquirer.prompt([
     {
       type: 'input',
@@ -27,11 +28,19 @@ gulp.task('init', function () {
       name: 'proceed',
       message: function (answers) {
         var confirmMsg = 'Boilerplate files to help jumpstart your development will be copied to the project root:\n'
+        confirmMsg += config.assets.paths.src + '\n'
         confirmMsg += config.styles.paths.src + '\n'
         confirmMsg += config.scripts.paths.src + '\n'
         confirmMsg += config.components.paths.src + '\n'
+        srcPaths.push(
+          '*src/assets/**/*',
+          '*src/css/**/*',
+          '*src/js/**/*',
+          '*src/components/**/*'
+        )
         if (config.runStandalone) {
           confirmMsg += config.templates.paths.src + '\n'
+          srcPaths.push('*src/templates/**/*')
         }
         return confirmMsg + 'Would you like to continue?'
       }
@@ -45,8 +54,10 @@ gulp.task('init', function () {
       ]
 
       var destRoot = (mode == 'local-dev') ? config.paths.testRoot + '/src' : config.paths.srcRoot
+      var srcFilter = filter(srcPaths)
 
       return gulp.src(config.paths.hollyRoot + '/src/**/*')
+        .pipe(srcFilter)
         .pipe(batchReplace(replaceProps))
         .pipe(gulp.dest(destRoot))
     } else {
