@@ -16,7 +16,7 @@ $ns: '.sg-card';
       }
     }
 
-    #{$ns}__code pre {
+    #{$ns}__code-wrap {
       display: block;
     }
   }
@@ -58,14 +58,23 @@ $ns: '.sg-card';
     }
   }
 
-  &__code {
-    &:hover {
-      color: #777;
-    }
+  &__code-preview {
+    transition: color 200ms ease;
 
-    pre {
-      display: none;
-      padding: 30px;
+    &:hover {
+      color: #888;
     }
+  }
+
+  &__code-wrap {
+    display: none;
+    position: relative;
+    padding: 30px;
+  }
+
+  &__btn-copy-code {
+    position: absolute;
+    right: 30px;
+    top: 0;
   }
 }

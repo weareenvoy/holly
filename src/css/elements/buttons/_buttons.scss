@@ -13,4 +13,9 @@
   &:hover {
     background-color: $gray;
   }
+
+  &[disabled] {
+    background-color: $gray;
+    pointer-events: none;
+  }
 }

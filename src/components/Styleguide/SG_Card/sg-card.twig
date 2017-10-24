@@ -10,23 +10,26 @@
 <div id="{{ id }}" class="{{ns}}">
 
   {% if title is defined %}
-    <header class="sg-card__header">
-      <a href="#headings" class="sg-card__anchor">#</a>
+    <header class="{{ns}}__header">
+      <a href="#headings" class="{{ns}}__anchor">#</a>
       <h3>{{ title }}</h3>
     </header>
   {% endif %}
 
   {% if markup is defined %}
-    <div class="sg-card__preview">
+    <div class="{{ns}}__preview">
       {{ markup }}
     </div>
 
-    <div class="sg-card__code">
-      <div class="sg-card__toggle-code sg-card__toggle-code--show">Show Code</div>
-      <div class="sg-card__toggle-code sg-card__toggle-code--hide">Hide Code</div>
-      <pre class="sg-code">
-        <code class="language-markup">{{ markup|e }}</code>
-      </pre>
+    <div class="{{ns}}__code-preview">
+      <div class="{{ns}}__toggle-code {{ns}}__toggle-code--show">Show Code</div>
+      <div class="{{ns}}__toggle-code {{ns}}__toggle-code--hide">Hide Code</div>
+      <div class="{{ns}}__code-wrap">
+        <button class="{{ns}}__btn-copy-code btn-copy" data-clipboard-text="{{ markup }}">Copy</button>
+        <pre class="sg-code">
+          <code class="language-markup">{{ markup|e }}</code>
+        </pre>
+      </div> {# __code-wrap #}
     </div> {# __code #}
   {% endif %}
 </div> {# .sg-card #}
