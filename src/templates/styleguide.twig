@@ -423,6 +423,147 @@ To edit settings, press <kbd><kbd>ctrl</kbd> + <kbd>,</kbd></kbd>.</p>
       )
     }}
 
+    <h2>Controls</h2>
+
+    {# Text Input #}
+    {{
+      render.component(
+        'Styleguide/SG_Card/sg-card', {
+          id: 'text-input',
+          title: 'Text Input',
+          markup: '
+<input type="text" placeholder="Input text...">
+<input type="text" placeholder="Disabled input" disabled>
+<input type="text" placeholder="Readonly input" readonly>'
+        }
+      )
+    }}
+
+    {# Password Input #}
+    {{
+      render.component(
+        'Styleguide/SG_Card/sg-card', {
+          id: 'password-input',
+          title: 'Password Input',
+          markup: '
+<input type="password" placeholder="Input password...">'
+        }
+      )
+    }}
+
+    {# Number Input #}
+    {{
+      render.component(
+        'Styleguide/SG_Card/sg-card', {
+          id: 'number-input',
+          title: 'Number Input',
+          markup: '
+<input type="number" value="1" min="1" max="10">'
+        }
+      )
+    }}
+
+    {# Textarea #}
+    {{
+      render.component(
+        'Styleguide/SG_Card/sg-card', {
+          id: 'textarea',
+          title: 'Textarea',
+          markup: '
+<textarea rows="10"></textarea>'
+        }
+      )
+    }}
+
+    {# Label #}
+    {{
+      render.component(
+        'Styleguide/SG_Card/sg-card', {
+          id: 'label',
+          title: 'Label',
+          markup: '
+<label for="test-input-label">Input Label</label>
+<input id="test-input-label" type="text" placeholder="Input text...">'
+        }
+      )
+    }}
+
+    {# Checkbox #}
+    {{
+      render.component(
+        'Styleguide/SG_Card/sg-card', {
+          id: 'checkbox',
+          title: 'Checkbox',
+          markup: '
+<label class="checkbox checkbox--inline">
+  <input type="checkbox" value="option1"> 1
+</label>
+<label class="checkbox checkbox--inline">
+  <input type="checkbox" value="option2"> 2
+</label>
+<label class="checkbox checkbox--inline checkbox--disabled">
+  <input type="checkbox" value="option3" disabled> 3 (disabled)
+</label>'
+        }
+      )
+    }}
+
+    {# Radios #}
+    {{
+      render.component(
+        'Styleguide/SG_Card/sg-card', {
+          id: 'radios',
+          title: 'Radios',
+          markup: '
+<label class="radio radio--inline">
+  <input type="radio" name="radio-group-inline" value="option1"> 1
+</label>
+<label class="radio radio--inline">
+  <input type="radio" name="radio-group-inline" value="option2"> 2
+</label>
+<label class="radio radio--inline radio--disabled">
+  <input type="radio" name="radio-group-inline" value="option3" disabled=""> 3
+</label>'
+        }
+      )
+    }}
+
+    {# Select #}
+    {{
+      render.component(
+        'Styleguide/SG_Card/sg-card', {
+          id: 'select',
+          title: 'Select',
+          markup: '
+<select class="select">
+  <option>One</option>
+  <option>Two</option>
+  <option>Three</option>
+  <option>Four</option>
+  <option>Five</option>
+</select>'
+        }
+      )
+    }}
+
+    {# Select - Multiple #}
+    {{
+      render.component(
+        'Styleguide/SG_Card/sg-card', {
+          id: 'select-multiple',
+          title: 'Select - Multiple',
+          markup: '
+<select multiple class="select">
+  <option>One</option>
+  <option>Two</option>
+  <option>Three</option>
+  <option>Four</option>
+  <option>Five</option>
+</select>'
+        }
+      )
+    }}
+
   </div> {# .grid-container #}
 </div> {# .page-wrapper #}
 

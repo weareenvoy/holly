@@ -24,6 +24,15 @@ new SG_Card('striped-table') // eslint-disable-line
 new SG_Card('bordered-table') // eslint-disable-line
 new SG_Card('hover-table') // eslint-disable-line
 new SG_Card('condensed-table') // eslint-disable-line
+new SG_Card('text-input') // eslint-disable-line
+new SG_Card('password-input') // eslint-disable-line
+new SG_Card('number-input') // eslint-disable-line
+new SG_Card('textarea') // eslint-disable-line
+new SG_Card('label') // eslint-disable-line
+new SG_Card('checkbox') // eslint-disable-line
+new SG_Card('radios') // eslint-disable-line
+new SG_Card('select') // eslint-disable-line
+new SG_Card('select-multiple') // eslint-disable-line
 
 /**
   Handle copy to clipboard for code.
