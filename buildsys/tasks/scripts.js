@@ -15,6 +15,7 @@ var source = require('vinyl-source-stream')
 var buffer = require('vinyl-buffer')
 var notify = require('gulp-notify')
 var rev = require('gulp-rev')
+var es = require('event-stream')
 var browserSync = require('../browserSync').server
 
 var srcScriptsGlob = [
@@ -37,27 +38,47 @@ gulp.task('scripts:lint', function () {
 /* $ gulp scripts:compile */
 gulp.task('scripts:compile', function () {
 
-  var b = browserify({
-    entries: config.scripts.paths.src + '/main.js',
-    debug: true
-  })
+  // JS entry files
+  var files = [
+    {
+      src: config.scripts.paths.src + '/main.js',
+      dest: './main.js'
+    },
+    {
+      src: config.scripts.paths.src + '/styleguide.js',
+      dest: './styleguide.js'
+    }
+  ]
 
-  return b.transform(babelify.configure({
-      presets: ['env']
-    }))
-    .bundle()
-    .on('error', swallowError)
-    .pipe(source('./main.js'))
-    .pipe(buffer())
-    .pipe(gulpif((env === 'dev'), sourcemaps.init()))
-    .pipe(gulpif((env === 'prod'), uglify()))
-    .pipe(gulpif((env === 'dev'), sourcemaps.write()))
-    .pipe(gulp.dest(config.scripts.paths.output))
-    .pipe(gulpif((env === 'prod'), rev()))
-    .pipe(gulpif((env === 'prod'), gulp.dest(config.scripts.paths.output)))
-    .pipe(gulpif((env === 'prod'), rev.manifest({ path: 'rev-manifest-js.json' })))
-    .pipe(gulpif((env === 'prod'), gulp.dest(config.paths.distRoot)))
-    .on('end', browserSync.reload)
+  var tasks = files.map(function (entry, index) {
+    var b = browserify({
+      entries: [entry.src],
+      debug: true
+    })
+
+    return b.transform(babelify.configure({
+        presets: ['env']
+      }))
+      .bundle()
+      .on('error', swallowError)
+      .pipe(source(entry.dest))
+      .pipe(buffer())
+      .pipe(gulpif((env === 'dev'), sourcemaps.init()))
+      .pipe(gulpif((env === 'prod'), uglify()))
+      .pipe(gulpif((env === 'dev'), sourcemaps.write()))
+      .pipe(gulp.dest(config.scripts.paths.output))
+      .pipe(gulpif((env === 'prod'), rev()))
+      .pipe(gulpif((env === 'prod'), gulp.dest(config.scripts.paths.output)))
+      .pipe(gulpif((env === 'prod'), rev.manifest({ path: 'rev-manifest-js.json' })))
+      .pipe(gulpif((env === 'prod'), gulp.dest(config.paths.distRoot)))
+      .on('end', function () {
+        // Only reload browser after final bundle compiles (zero)
+        if (index === 0) {
+          browserSync.reload()
+        }
+      })
+    })
+  return es.merge.apply(null, tasks)
 })
 
 function swallowError (error) {

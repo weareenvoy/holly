@@ -3,6 +3,35 @@
  * Styleguide stylesheet. 
  */
 
-.sg-box {
-  
+.sg-card {
+  background-color: white;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.sg-card-header {
+  padding: 30px;
+  background-color: #ddd;
+
+  h3 {
+    display: inline-block;
+    margin: 0;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: default;
+  }
+}
+
+.sg-card-anchor {
+  display: inline-block;
+  border: 0;
+}
+
+.sg-card-elements {
+  padding: 30px;
+  border-bottom: 1px solid #eee;
+}
+
+.sg-card-code {
+  padding: 30px;
 }
