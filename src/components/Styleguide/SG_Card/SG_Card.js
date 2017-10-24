@@ -6,7 +6,7 @@ export class SG_Card extends Component {
     super('sg-card', id)
     this.$toggleCodeLink = this.getElement('toggle-code')
     this.$toggleCodeLink.on('click', () => {
-      this.addMod('code-is-expanded')
+      this.toggleMod('code-is-expanded')
     })
   }
 }

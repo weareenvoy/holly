@@ -3,6 +3,7 @@
  * Styleguide main entry point.
  */
 
+import Prism from 'prismjs'
 import { SG_Card } from '../components/Styleguide/SG_Card/SG_Card'
 
 new SG_Card('headings') // eslint-disable-line

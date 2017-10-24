@@ -6,6 +6,16 @@ $ns: '.sg-card';
   overflow: hidden;
 
   &--code-is-expanded {
+    #{$ns}__toggle-code {
+      &--hide {
+        display: block;
+      }
+
+      &--show {
+        display: none;
+      }
+    }
+
     #{$ns}__code pre {
       display: block;
     }
@@ -42,6 +52,10 @@ $ns: '.sg-card';
     text-transform: uppercase;
     letter-spacing: 1px;
     cursor: pointer;
+
+    &--hide {
+      display: none;
+    }
   }
 
   &__code {

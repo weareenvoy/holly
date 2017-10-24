@@ -24,6 +24,10 @@ export class Component {
     this.$self.removeClass(`${this.ns}--${modName}`)
   }
 
+  toggleMod (modName) {
+    this.$self.toggleClass(`${this.ns}--${modName}`)
+  }
+
   getData (dataAttr) {
     return this.$self.data(dataAttr)
   }

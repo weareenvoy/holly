@@ -28,14 +28,13 @@
         <h6>Heading 6</h6>
       </div> {# __elements #}
       <div class="sg-card__code">
-        <div class="sg-card__toggle-code">Show Code</div>
-        <pre>
-          &lt;h1&gt;Heading 1&lt;/h1&gt;
-          &lt;h2&gt;Heading 2&lt;/h2&gt;
-          &lt;h3&gt;Heading 3&lt;/h3&gt;
-          &lt;h4&gt;Heading 4&lt;/h4&gt;
-          &lt;h5&gt;Heading 5&lt;/h5&gt;
-          &lt;h6&gt;Heading 6&lt;/h6&gt;
+        <div class="sg-card__toggle-code sg-card__toggle-code--show">Show Code</div>
+        <div class="sg-card__toggle-code sg-card__toggle-code--hide">Hide Code</div>
+        {% set codeText = '<h1>Heading 1</h1>' %}
+        <pre class="sg-code">
+          <code class="language-markup">
+{{ codeText|e('html') }}
+          </code>
         </pre>
       </div> {# __code #}
     </div> {# .sg-card #}
