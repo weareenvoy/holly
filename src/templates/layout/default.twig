@@ -4,13 +4,15 @@
   <head>
     {{ render.partial('head') }}
     {{ render.partial('stylesheets') }}
+    {% block stylesheets %}{% endblock %}
   </head>
   <body>
     {{ render.partial('header') }}
 
     {% block content %}{% endblock %}
 
-    {{ render.partial('scripts') }}
     {{ render.partial('footer') }}
+    {{ render.partial('scripts') }}
+    {% block scripts %}{% endblock %}
   </body>
 </html>
