@@ -11,7 +11,7 @@
 
   {% if title is defined %}
     <header class="{{ns}}__header">
-      <a href="#headings" class="{{ns}}__anchor">#</a>
+      <a href="#{{ id }}" class="{{ns}}__anchor">#</a>
       <h3>{{ title }}</h3>
     </header>
   {% endif %}
@@ -25,7 +25,7 @@
       <div class="{{ns}}__toggle-code {{ns}}__toggle-code--show">Show Code</div>
       <div class="{{ns}}__toggle-code {{ns}}__toggle-code--hide">Hide Code</div>
       <div class="{{ns}}__code-wrap">
-        <button class="{{ns}}__btn-copy-code btn-copy" data-clipboard-text="{{ markup }}">Copy</button>
+        <button class="{{ns}}__btn-copy-code sg-btn-copy" data-clipboard-text='{{ markup }}'>Copy</button>
         <pre class="sg-code">
           <code class="language-markup">{{ markup|e }}</code>
         </pre>

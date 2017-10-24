@@ -1,6 +1,7 @@
 $ns: '.sg-card';
 
 #{$ns} {
+  margin-bottom: 100px;
   background-color: white;
   border-radius: 8px;
   overflow: hidden;
@@ -52,18 +53,18 @@ $ns: '.sg-card';
     text-transform: uppercase;
     letter-spacing: 1px;
     cursor: pointer;
+    transition: color 200ms ease;
 
     &--hide {
       display: none;
     }
-  }
-
-  &__code-preview {
-    transition: color 200ms ease;
 
     &:hover {
       color: #888;
     }
+  }
+
+  &__code-preview {
   }
 
   &__code-wrap {

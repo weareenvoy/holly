@@ -14,6 +14,7 @@
 
     <h2>Typography</h2>
 
+    {# Headings #}
     {{
       render.component(
         'Styleguide/SG_Card/sg-card', {
@@ -26,6 +27,398 @@
 <h4>Heading 4</h4>
 <h5>Heading 5</h5>
 <h6>Heading 6</h6>'
+        }
+      )
+    }}
+
+    {# Body Copy #}
+    {{
+      render.component(
+        'Styleguide/SG_Card/sg-card', {
+          id: 'body-copy',
+          title: 'Body Copy',
+          markup: '
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, tenetur.</p>'
+        }
+      )
+    }}
+
+    {# Links #}
+    {{
+      render.component(
+        'Styleguide/SG_Card/sg-card', {
+          id: 'links',
+          title: 'Links',
+          markup: '
+<p>Click <a href="/components.html">here</a> to view components.</p>'
+        }
+      )
+    }}
+
+    {# Inline Text Elements #}
+    {{
+      render.component(
+        'Styleguide/SG_Card/sg-card', {
+          id: 'inline-text-elements',
+          title: 'Inline Text Elements',
+          markup: '
+<p>You can use the mark tag to <mark>highlight</mark> text.</p>
+<p><del>This line of text is meant to be treated as deleted text.</del></p>
+<p><s>This line of text is meant to be treated as no longer accurate.</s></p>
+<p><ins>This line of text is meant to be treated as an addition to the document.</ins></p>
+<p><u>This line of text will render as underlined</u></p>
+<p><small>This line of text is meant to be treated as fine print.</small></p>
+<p><strong>rendered as bold text</strong></p>
+<p><em>rendered as italicized text</em></p>
+<p><abbr title="Compact Disk">CD</abbr></p>
+<p><cite title="Source Title">Source Title</cite></p>
+'
+        }
+      )
+    }}
+
+    {# Address #}
+    {{
+      render.component(
+        'Styleguide/SG_Card/sg-card', {
+          id: 'address',
+          title: 'Address',
+          markup: '
+<address>
+  <strong>Mr. Example</strong><br>
+  555 Orange Road<br>
+  San Diego, CA 55555<br>
+  <abbr title="Phone">P:</abbr> (555) 555-5555
+</address>'
+        }
+      )
+    }}
+
+    {# Blockquote #}
+    {{
+      render.component(
+        'Styleguide/SG_Card/sg-card', {
+          id: 'blockquote',
+          title: 'Blockquote',
+          markup: '
+<blockquote>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+</blockquote>
+
+<blockquote>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+    <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
+</blockquote>'
+        }
+      )
+    }}
+
+    <h2>Lists</h2>
+
+    {# Unordered List #}
+    {{
+      render.component(
+        'Styleguide/SG_Card/sg-card', {
+          id: 'unordered-list',
+          title: 'Unordered List',
+          markup: '
+<ul>
+  <li>
+    Lorem ipsum dolor sit amet.
+    <ul>
+      <li>Subitem</li>
+      <li>Subitem</li>
+    </ul>
+  </li>
+  <li>Lorem ipsum dolor sit amet, consectetur.</li>
+  <li>Lorem ipsum dolor.</li>
+</ul>'
+        }
+      )
+    }}
+
+    {# Ordered List #}
+    {{
+      render.component(
+        'Styleguide/SG_Card/sg-card', {
+          id: 'ordered-list',
+          title: 'Ordered List',
+          markup: '
+<ol>
+  <li>
+    Lorem ipsum dolor sit amet.
+    <ol>
+      <li>Subitem</li>
+      <li>Subitem</li>
+    </ol>
+  </li>
+  <li>Lorem ipsum dolor sit amet, consectetur.</li>
+  <li>Lorem ipsum dolor.</li>
+</ol>'
+        }
+      )
+    }}
+
+    <h2>Dividers</h2>
+
+    {# Default Divider #}
+    {{
+      render.component(
+        'Styleguide/SG_Card/sg-card', {
+          id: 'default-divider',
+          title: 'Default Divider',
+          markup: '
+<hr>'
+        }
+      )
+    }}
+
+    <h2>Buttons</h2>
+
+    {# Default Button #}
+    {{
+      render.component(
+        'Styleguide/SG_Card/sg-card', {
+          id: 'default-button',
+          title: 'Default Button',
+          markup: '
+<a href="#" class="btn">Button</a>'
+        }
+      )
+    }}
+
+    <h2>Code</h2>
+
+    {# Code Elements #}
+    {{
+      render.component(
+        'Styleguide/SG_Card/sg-card', {
+          id: 'code-elements',
+          title: 'Code Elements',
+          markup: '
+<p>For example, <code>&lt;section&gt;</code> should be wrapped as inline.</p>
+<p>To switch directories, type <kbd>cd</kbd> followed by the name of the directory.
+To edit settings, press <kbd><kbd>ctrl</kbd> + <kbd>,</kbd></kbd>.</p>
+<pre>
+&lt;article&gt;
+  &lt;p&gt;First paragraph.&lt;/p&gt;
+  &lt;p&gt;Second paragraph.&lt;/p&gt;
+&lt;article&gt;
+</pre>
+<var>y</var> = <var>m</var><var>x</var> + <var>b</var>
+<samp>This text is meant to be treated as sample output from a computer program.</samp>'
+        }
+      )
+    }}
+
+    <h2>Tables</h2>
+
+    {# Basic Table #}
+    {{
+      render.component(
+        'Styleguide/SG_Card/sg-card', {
+          id: 'basic-table',
+          title: 'Basic Table',
+          markup: '
+<table class="table">
+  <caption>Optional table caption.</caption>
+  <thead>
+      <tr>
+        <th>#</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Username</th>
+      </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Larry</td>
+      <td>the Bird</td>
+      <td>@twitter</td>
+    </tr>
+  </tbody>
+</table>'
+        }
+      )
+    }}
+
+    {# Striped Table #}
+    {{
+      render.component(
+        'Styleguide/SG_Card/sg-card', {
+          id: 'striped-table',
+          title: 'Striped Table',
+          markup: '
+<table class="table table--striped">
+  <caption>Optional table caption.</caption>
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Username</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Larry</td>
+      <td>the Bird</td>
+      <td>@twitter</td>
+    </tr>
+  </tbody>
+</table>'
+        }
+      )
+    }}
+
+    {# Bordered Table #}
+    {{
+      render.component(
+        'Styleguide/SG_Card/sg-card', {
+          id: 'bordered-table',
+          title: 'Bordered Table',
+          markup: '
+<table class="table table--bordered">
+  <caption>Optional table caption.</caption>
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Username</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Larry</td>
+      <td>the Bird</td>
+      <td>@twitter</td>
+    </tr>
+  </tbody>
+</table>'
+        }
+      )
+    }}
+
+    {# Hover Table #}
+    {{
+      render.component(
+        'Styleguide/SG_Card/sg-card', {
+          id: 'hover-table',
+          title: 'Hover Table',
+          markup: '
+<table class="table table--hover">
+  <caption>Optional table caption.</caption>
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Username</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Larry</td>
+      <td>the Bird</td>
+      <td>@twitter</td>
+    </tr>
+  </tbody>
+</table>'
+        }
+      )
+    }}
+
+    {# Condensed Table #}
+    {{
+      render.component(
+        'Styleguide/SG_Card/sg-card', {
+          id: 'condensed-table',
+          title: 'Condensed Table',
+          markup: '
+<table class="table table--condensed">
+  <caption>Optional table caption.</caption>
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Username</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Larry</td>
+      <td>the Bird</td>
+      <td>@twitter</td>
+    </tr>
+  </tbody>
+</table>'
         }
       )
     }}
