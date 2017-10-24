@@ -38,19 +38,15 @@ gulp.task('scripts:lint', function () {
 /* $ gulp scripts:compile */
 gulp.task('scripts:compile', function () {
 
-  // JS entry files
-  var files = [
-    {
-      src: config.scripts.paths.src + '/main.js',
-      dest: './main.js'
-    },
-    {
-      src: config.scripts.paths.src + '/styleguide.js',
-      dest: './styleguide.js'
+  // Transform JS entry files
+  var entries = config.scripts.bundles.map(function (entry) {
+    return {
+      src: config.scripts.paths.src + '/' + entry,
+      dest: './' + entry
     }
-  ]
+  })
 
-  var tasks = files.map(function (entry, index) {
+  var tasks = entries.map(function (entry, index) {
     var b = browserify({
       entries: [entry.src],
       debug: true

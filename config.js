@@ -44,7 +44,11 @@ module.exports = {
     paths: {
       src: srcRoot + '/js',
       output: distRoot + '/js'
-    }
+    },
+    bundles: [
+      'main.js',
+      'styleguide.js'
+    ]
   },
   components: {
     paths: {
