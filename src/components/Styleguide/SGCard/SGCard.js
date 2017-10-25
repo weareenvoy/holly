@@ -1,7 +1,6 @@
 import { Component } from '../../Component'
-import $ from 'jquery'
 
-export class SG_Card extends Component {
+export class SGCard extends Component {
   constructor (id) {
     super('sg-card', id)
     this.$toggleCodeLink = this.getElement('toggle-code')

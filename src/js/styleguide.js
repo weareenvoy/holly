@@ -4,35 +4,35 @@
  */
 
 import $ from 'jquery'
-import Prism from 'prismjs'
+import Prism from 'prismjs' // eslint-disable-line
 import Clipboard from 'clipboard'
-import { SG_Card } from '../components/Styleguide/SG_Card/SG_Card'
+import { SGCard } from '../components/Styleguide/SGCard/SGCard'
 
-new SG_Card('headings') // eslint-disable-line
-new SG_Card('body-copy') // eslint-disable-line
-new SG_Card('links') // eslint-disable-line
-new SG_Card('inline-text-elements') // eslint-disable-line
-new SG_Card('address') // eslint-disable-line
-new SG_Card('blockquote') // eslint-disable-line
-new SG_Card('unordered-list') // eslint-disable-line
-new SG_Card('ordered-list') // eslint-disable-line
-new SG_Card('default-divider') // eslint-disable-line
-new SG_Card('default-button') // eslint-disable-line
-new SG_Card('code-elements') // eslint-disable-line
-new SG_Card('basic-table') // eslint-disable-line
-new SG_Card('striped-table') // eslint-disable-line
-new SG_Card('bordered-table') // eslint-disable-line
-new SG_Card('hover-table') // eslint-disable-line
-new SG_Card('condensed-table') // eslint-disable-line
-new SG_Card('text-input') // eslint-disable-line
-new SG_Card('password-input') // eslint-disable-line
-new SG_Card('number-input') // eslint-disable-line
-new SG_Card('textarea') // eslint-disable-line
-new SG_Card('label') // eslint-disable-line
-new SG_Card('checkbox') // eslint-disable-line
-new SG_Card('radios') // eslint-disable-line
-new SG_Card('select') // eslint-disable-line
-new SG_Card('select-multiple') // eslint-disable-line
+new SGCard('headings') // eslint-disable-line
+new SGCard('body-copy') // eslint-disable-line
+new SGCard('links') // eslint-disable-line
+new SGCard('inline-text-elements') // eslint-disable-line
+new SGCard('address') // eslint-disable-line
+new SGCard('blockquote') // eslint-disable-line
+new SGCard('unordered-list') // eslint-disable-line
+new SGCard('ordered-list') // eslint-disable-line
+new SGCard('default-divider') // eslint-disable-line
+new SGCard('default-button') // eslint-disable-line
+new SGCard('code-elements') // eslint-disable-line
+new SGCard('basic-table') // eslint-disable-line
+new SGCard('striped-table') // eslint-disable-line
+new SGCard('bordered-table') // eslint-disable-line
+new SGCard('hover-table') // eslint-disable-line
+new SGCard('condensed-table') // eslint-disable-line
+new SGCard('text-input') // eslint-disable-line
+new SGCard('password-input') // eslint-disable-line
+new SGCard('number-input') // eslint-disable-line
+new SGCard('textarea') // eslint-disable-line
+new SGCard('label') // eslint-disable-line
+new SGCard('checkbox') // eslint-disable-line
+new SGCard('radios') // eslint-disable-line
+new SGCard('select') // eslint-disable-line
+new SGCard('select-multiple') // eslint-disable-line
 
 /**
   Handle copy to clipboard for code.
