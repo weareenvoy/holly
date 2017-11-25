@@ -3,7 +3,7 @@
 #### ENVOYsites Gulp build system and boilerplate.
 
 ## Requirements
-**Node 6 recommended, tested on 6.11**
+**Node 8 recommended, tested on 8.9**
 
 ## Install
 To get **holly** set up on your static web project, we recommend that NPM 5 or greater is installed on your machine.
