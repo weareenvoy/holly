@@ -1,5 +1,11 @@
+/**
+ * Component: Modal
+ */
+
+/* --- namespace --- */
 $ns: '.modal';
 
+/* --- styles --- */
 #{$ns} {
   display: none;
   position: fixed 0;

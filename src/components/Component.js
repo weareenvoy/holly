@@ -1,3 +1,7 @@
+/**
+ * Component Base Class
+ */
+
 import $ from 'jquery'
 
 export class Component {

@@ -1,5 +1,11 @@
+/**
+ * Component: Styleguide Card
+ */
+
+/* --- namespace --- */
 $ns: '.sg-card';
 
+/* --- styles --- */
 #{$ns} {
   margin-bottom: 100px;
   background-color: white;
@@ -62,9 +68,6 @@ $ns: '.sg-card';
     &:hover {
       color: #888;
     }
-  }
-
-  &__code-preview {
   }
 
   &__code-wrap {

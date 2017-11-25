@@ -16,52 +16,45 @@
 
     {# Headings #}
     {{
-      render.component(
-        'Styleguide/SGCard/sg-card', {
-          id: 'headings',
-          title: 'Headings',
-          markup: '
+      render.component('Styleguide/SGCard/sg-card', {
+        id: 'headings',
+        title: 'Headings',
+        markup: '
 <h1>Heading 1</h1>
 <h2>Heading 2</h2>
 <h3>Heading 3</h3>
 <h4>Heading 4</h4>
 <h5>Heading 5</h5>
 <h6>Heading 6</h6>'
-        }
-      )
+      })
     }}
 
     {# Body Copy #}
     {{
-      render.component(
-        'Styleguide/SGCard/sg-card', {
-          id: 'body-copy',
-          title: 'Body Copy',
-          markup: '
+      render.component('Styleguide/SGCard/sg-card', {
+        id: 'body-copy',
+        title: 'Body Copy',
+        markup: '
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, tenetur.</p>'
-        }
-      )
+      })
     }}
 
     {# Links #}
     {{
-      render.component(
-        'Styleguide/SGCard/sg-card', {
-          id: 'links',
-          title: 'Links',
-          markup: '
+      render.component('Styleguide/SGCard/sg-card', {
+        id: 'links',
+        title: 'Links',
+        markup: '
 <p>Click <a href="/components.html">here</a> to view components.</p>'
-        }
-      )
+      })
     }}
 
     {# Inline Text Elements #}
     {{
-      render.component(
-        'Styleguide/SGCard/sg-card', {
-          id: 'inline-text-elements',
-          title: 'Inline Text Elements',
-          markup: '
+      render.component('Styleguide/SGCard/sg-card', {
+        id: 'inline-text-elements',
+        title: 'Inline Text Elements',
+        markup: '
 <p>You can use the mark tag to <mark>highlight</mark> text.</p>
 <p><del>This line of text is meant to be treated as deleted text.</del></p>
 <p><s>This line of text is meant to be treated as no longer accurate.</s></p>
@@ -73,495 +66,452 @@
 <p><abbr title="Compact Disk">CD</abbr></p>
 <p><cite title="Source Title">Source Title</cite></p>
 '
-        }
-      )
+      })
     }}
 
     {# Address #}
     {{
-      render.component(
-        'Styleguide/SGCard/sg-card', {
-          id: 'address',
-          title: 'Address',
-          markup: '
+      render.component('Styleguide/SGCard/sg-card', {
+        id: 'address',
+        title: 'Address',
+        markup: '
 <address>
-  <strong>Mr. Example</strong><br>
-  555 Orange Road<br>
-  San Diego, CA 55555<br>
-  <abbr title="Phone">P:</abbr> (555) 555-5555
+<strong>Mr. Example</strong><br>
+555 Orange Road<br>
+San Diego, CA 55555<br>
+<abbr title="Phone">P:</abbr> (555) 555-5555
 </address>'
-        }
-      )
+      })
     }}
 
     {# Blockquote #}
     {{
-      render.component(
-        'Styleguide/SGCard/sg-card', {
-          id: 'blockquote',
-          title: 'Blockquote',
-          markup: '
+      render.component('Styleguide/SGCard/sg-card', {
+        id: 'blockquote',
+        title: 'Blockquote',
+        markup: '
 <blockquote>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
 </blockquote>
 
 <blockquote>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-    <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+  <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
 </blockquote>'
-        }
-      )
+      })
     }}
 
     <h2>Lists</h2>
 
     {# Unordered List #}
     {{
-      render.component(
-        'Styleguide/SGCard/sg-card', {
-          id: 'unordered-list',
-          title: 'Unordered List',
-          markup: '
+      render.component('Styleguide/SGCard/sg-card', {
+        id: 'unordered-list',
+        title: 'Unordered List',
+        markup: '
 <ul>
-  <li>
-    Lorem ipsum dolor sit amet.
-    <ul>
-      <li>Subitem</li>
-      <li>Subitem</li>
-    </ul>
-  </li>
-  <li>Lorem ipsum dolor sit amet, consectetur.</li>
-  <li>Lorem ipsum dolor.</li>
+<li>
+  Lorem ipsum dolor sit amet.
+  <ul>
+    <li>Subitem</li>
+    <li>Subitem</li>
+  </ul>
+</li>
+<li>Lorem ipsum dolor sit amet, consectetur.</li>
+<li>Lorem ipsum dolor.</li>
 </ul>'
-        }
-      )
+      })
     }}
 
     {# Ordered List #}
     {{
-      render.component(
-        'Styleguide/SGCard/sg-card', {
-          id: 'ordered-list',
-          title: 'Ordered List',
-          markup: '
+      render.component('Styleguide/SGCard/sg-card', {
+        id: 'ordered-list',
+        title: 'Ordered List',
+        markup: '
 <ol>
-  <li>
-    Lorem ipsum dolor sit amet.
-    <ol>
-      <li>Subitem</li>
-      <li>Subitem</li>
-    </ol>
-  </li>
-  <li>Lorem ipsum dolor sit amet, consectetur.</li>
-  <li>Lorem ipsum dolor.</li>
+<li>
+  Lorem ipsum dolor sit amet.
+  <ol>
+    <li>Subitem</li>
+    <li>Subitem</li>
+  </ol>
+</li>
+<li>Lorem ipsum dolor sit amet, consectetur.</li>
+<li>Lorem ipsum dolor.</li>
 </ol>'
-        }
-      )
+      })
     }}
 
     <h2>Dividers</h2>
 
     {# Default Divider #}
     {{
-      render.component(
-        'Styleguide/SGCard/sg-card', {
-          id: 'default-divider',
-          title: 'Default Divider',
-          markup: '
+      render.component('Styleguide/SGCard/sg-card', {
+        id: 'default-divider',
+        title: 'Default Divider',
+        markup: '
 <hr>'
-        }
-      )
+      })
     }}
 
     <h2>Buttons</h2>
 
     {# Default Button #}
     {{
-      render.component(
-        'Styleguide/SGCard/sg-card', {
-          id: 'default-button',
-          title: 'Default Button',
-          markup: '
+      render.component('Styleguide/SGCard/sg-card', {
+        id: 'default-button',
+        title: 'Default Button',
+        markup: '
 <a href="#" class="btn">Button</a>'
-        }
-      )
+      })
     }}
 
     <h2>Code</h2>
 
     {# Code Elements #}
     {{
-      render.component(
-        'Styleguide/SGCard/sg-card', {
-          id: 'code-elements',
-          title: 'Code Elements',
-          markup: '
+      render.component('Styleguide/SGCard/sg-card', {
+        id: 'code-elements',
+        title: 'Code Elements',
+        markup: '
 <p>For example, <code>&lt;section&gt;</code> should be wrapped as inline.</p>
 <p>To switch directories, type <kbd>cd</kbd> followed by the name of the directory.
 To edit settings, press <kbd><kbd>ctrl</kbd> + <kbd>,</kbd></kbd>.</p>
 <pre>
 &lt;article&gt;
-  &lt;p&gt;First paragraph.&lt;/p&gt;
-  &lt;p&gt;Second paragraph.&lt;/p&gt;
+&lt;p&gt;First paragraph.&lt;/p&gt;
+&lt;p&gt;Second paragraph.&lt;/p&gt;
 &lt;article&gt;
 </pre>
 <var>y</var> = <var>m</var><var>x</var> + <var>b</var>
 <samp>This text is meant to be treated as sample output from a computer program.</samp>'
-        }
-      )
+      })
     }}
 
     <h2>Tables</h2>
 
     {# Basic Table #}
     {{
-      render.component(
-        'Styleguide/SGCard/sg-card', {
-          id: 'basic-table',
-          title: 'Basic Table',
-          markup: '
+      render.component('Styleguide/SGCard/sg-card', {
+        id: 'basic-table',
+        title: 'Basic Table',
+        markup: '
 <table class="table">
-  <caption>Optional table caption.</caption>
-  <thead>
-      <tr>
-        <th>#</th>
-        <th>First Name</th>
-        <th>Last Name</th>
-        <th>Username</th>
-      </tr>
-  </thead>
-  <tbody>
+<caption>Optional table caption.</caption>
+<thead>
     <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
+      <th>#</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Username</th>
     </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-    </tr>
-  </tbody>
+</thead>
+<tbody>
+  <tr>
+    <th scope="row">1</th>
+    <td>Mark</td>
+    <td>Otto</td>
+    <td>@mdo</td>
+  </tr>
+  <tr>
+    <th scope="row">2</th>
+    <td>Jacob</td>
+    <td>Thornton</td>
+    <td>@fat</td>
+  </tr>
+  <tr>
+    <th scope="row">3</th>
+    <td>Larry</td>
+    <td>the Bird</td>
+    <td>@twitter</td>
+  </tr>
+</tbody>
 </table>'
-        }
-      )
+      })
     }}
 
     {# Striped Table #}
     {{
-      render.component(
-        'Styleguide/SGCard/sg-card', {
-          id: 'striped-table',
-          title: 'Striped Table',
-          markup: '
+      render.component('Styleguide/SGCard/sg-card', {
+        id: 'striped-table',
+        title: 'Striped Table',
+        markup: '
 <table class="table table--striped">
-  <caption>Optional table caption.</caption>
-  <thead>
-    <tr>
-      <th>#</th>
-      <th>First Name</th>
-      <th>Last Name</th>
-      <th>Username</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-    </tr>
-  </tbody>
+<caption>Optional table caption.</caption>
+<thead>
+  <tr>
+    <th>#</th>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Username</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <th scope="row">1</th>
+    <td>Mark</td>
+    <td>Otto</td>
+    <td>@mdo</td>
+  </tr>
+  <tr>
+    <th scope="row">2</th>
+    <td>Jacob</td>
+    <td>Thornton</td>
+    <td>@fat</td>
+  </tr>
+  <tr>
+    <th scope="row">3</th>
+    <td>Larry</td>
+    <td>the Bird</td>
+    <td>@twitter</td>
+  </tr>
+</tbody>
 </table>'
-        }
-      )
+      })
     }}
 
     {# Bordered Table #}
     {{
-      render.component(
-        'Styleguide/SGCard/sg-card', {
-          id: 'bordered-table',
-          title: 'Bordered Table',
-          markup: '
+      render.component('Styleguide/SGCard/sg-card', {
+        id: 'bordered-table',
+        title: 'Bordered Table',
+        markup: '
 <table class="table table--bordered">
-  <caption>Optional table caption.</caption>
-  <thead>
-    <tr>
-      <th>#</th>
-      <th>First Name</th>
-      <th>Last Name</th>
-      <th>Username</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-    </tr>
-  </tbody>
+<caption>Optional table caption.</caption>
+<thead>
+  <tr>
+    <th>#</th>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Username</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <th scope="row">1</th>
+    <td>Mark</td>
+    <td>Otto</td>
+    <td>@mdo</td>
+  </tr>
+  <tr>
+    <th scope="row">2</th>
+    <td>Jacob</td>
+    <td>Thornton</td>
+    <td>@fat</td>
+  </tr>
+  <tr>
+    <th scope="row">3</th>
+    <td>Larry</td>
+    <td>the Bird</td>
+    <td>@twitter</td>
+  </tr>
+</tbody>
 </table>'
-        }
-      )
+      })
     }}
 
     {# Hover Table #}
     {{
-      render.component(
-        'Styleguide/SGCard/sg-card', {
-          id: 'hover-table',
-          title: 'Hover Table',
-          markup: '
+      render.component('Styleguide/SGCard/sg-card', {
+        id: 'hover-table',
+        title: 'Hover Table',
+        markup: '
 <table class="table table--hover">
-  <caption>Optional table caption.</caption>
-  <thead>
-    <tr>
-      <th>#</th>
-      <th>First Name</th>
-      <th>Last Name</th>
-      <th>Username</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-    </tr>
-  </tbody>
+<caption>Optional table caption.</caption>
+<thead>
+  <tr>
+    <th>#</th>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Username</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <th scope="row">1</th>
+    <td>Mark</td>
+    <td>Otto</td>
+    <td>@mdo</td>
+  </tr>
+  <tr>
+    <th scope="row">2</th>
+    <td>Jacob</td>
+    <td>Thornton</td>
+    <td>@fat</td>
+  </tr>
+  <tr>
+    <th scope="row">3</th>
+    <td>Larry</td>
+    <td>the Bird</td>
+    <td>@twitter</td>
+  </tr>
+</tbody>
 </table>'
-        }
-      )
+      })
     }}
 
     {# Condensed Table #}
     {{
-      render.component(
-        'Styleguide/SGCard/sg-card', {
-          id: 'condensed-table',
-          title: 'Condensed Table',
-          markup: '
+      render.component('Styleguide/SGCard/sg-card', {
+        id: 'condensed-table',
+        title: 'Condensed Table',
+        markup: '
 <table class="table table--condensed">
-  <caption>Optional table caption.</caption>
-  <thead>
-    <tr>
-      <th>#</th>
-      <th>First Name</th>
-      <th>Last Name</th>
-      <th>Username</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-    </tr>
-  </tbody>
+<caption>Optional table caption.</caption>
+<thead>
+  <tr>
+    <th>#</th>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Username</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <th scope="row">1</th>
+    <td>Mark</td>
+    <td>Otto</td>
+    <td>@mdo</td>
+  </tr>
+  <tr>
+    <th scope="row">2</th>
+    <td>Jacob</td>
+    <td>Thornton</td>
+    <td>@fat</td>
+  </tr>
+  <tr>
+    <th scope="row">3</th>
+    <td>Larry</td>
+    <td>the Bird</td>
+    <td>@twitter</td>
+  </tr>
+</tbody>
 </table>'
-        }
-      )
+      })
     }}
 
     <h2>Controls</h2>
 
     {# Text Input #}
     {{
-      render.component(
-        'Styleguide/SGCard/sg-card', {
-          id: 'text-input',
-          title: 'Text Input',
-          markup: '
+      render.component('Styleguide/SGCard/sg-card', {
+        id: 'text-input',
+        title: 'Text Input',
+        markup: '
 <input type="text" placeholder="Input text...">
 <input type="text" placeholder="Disabled input" disabled>
 <input type="text" placeholder="Readonly input" readonly>'
-        }
-      )
+      })
     }}
 
     {# Password Input #}
     {{
-      render.component(
-        'Styleguide/SGCard/sg-card', {
-          id: 'password-input',
-          title: 'Password Input',
-          markup: '
+      render.component('Styleguide/SGCard/sg-card', {
+        id: 'password-input',
+        title: 'Password Input',
+        markup: '
 <input type="password" placeholder="Input password...">'
-        }
-      )
+      })
     }}
 
     {# Number Input #}
     {{
-      render.component(
-        'Styleguide/SGCard/sg-card', {
-          id: 'number-input',
-          title: 'Number Input',
-          markup: '
+      render.component('Styleguide/SGCard/sg-card', {
+        id: 'number-input',
+        title: 'Number Input',
+        markup: '
 <input type="number" value="1" min="1" max="10">'
-        }
-      )
+      })
     }}
 
     {# Textarea #}
     {{
-      render.component(
-        'Styleguide/SGCard/sg-card', {
-          id: 'textarea',
-          title: 'Textarea',
-          markup: '
+      render.component('Styleguide/SGCard/sg-card', {
+        id: 'textarea',
+        title: 'Textarea',
+        markup: '
 <textarea rows="10"></textarea>'
-        }
-      )
+      })
     }}
 
     {# Label #}
     {{
-      render.component(
-        'Styleguide/SGCard/sg-card', {
-          id: 'label',
-          title: 'Label',
-          markup: '
+      render.component('Styleguide/SGCard/sg-card', {
+        id: 'label',
+        title: 'Label',
+        markup: '
 <label for="test-input-label">Input Label</label>
 <input id="test-input-label" type="text" placeholder="Input text...">'
-        }
-      )
+      })
     }}
 
     {# Checkbox #}
     {{
-      render.component(
-        'Styleguide/SGCard/sg-card', {
-          id: 'checkbox',
-          title: 'Checkbox',
-          markup: '
+      render.component('Styleguide/SGCard/sg-card', {
+        id: 'checkbox',
+        title: 'Checkbox',
+        markup: '
 <label class="checkbox checkbox--inline">
-  <input type="checkbox" value="option1"> 1
+<input type="checkbox" value="option1"> 1
 </label>
 <label class="checkbox checkbox--inline">
-  <input type="checkbox" value="option2"> 2
+<input type="checkbox" value="option2"> 2
 </label>
 <label class="checkbox checkbox--inline checkbox--disabled">
-  <input type="checkbox" value="option3" disabled> 3 (disabled)
+<input type="checkbox" value="option3" disabled> 3 (disabled)
 </label>'
-        }
-      )
+      })
     }}
 
     {# Radios #}
     {{
-      render.component(
-        'Styleguide/SGCard/sg-card', {
-          id: 'radios',
-          title: 'Radios',
-          markup: '
+      render.component('Styleguide/SGCard/sg-card', {
+        id: 'radios',
+        title: 'Radios',
+        markup: '
 <label class="radio radio--inline">
-  <input type="radio" name="radio-group-inline" value="option1"> 1
+<input type="radio" name="radio-group-inline" value="option1"> 1
 </label>
 <label class="radio radio--inline">
-  <input type="radio" name="radio-group-inline" value="option2"> 2
+<input type="radio" name="radio-group-inline" value="option2"> 2
 </label>
 <label class="radio radio--inline radio--disabled">
-  <input type="radio" name="radio-group-inline" value="option3" disabled=""> 3
+<input type="radio" name="radio-group-inline" value="option3" disabled=""> 3
 </label>'
-        }
-      )
+      })
     }}
 
     {# Select #}
     {{
-      render.component(
-        'Styleguide/SGCard/sg-card', {
-          id: 'select',
-          title: 'Select',
-          markup: '
+      render.component('Styleguide/SGCard/sg-card', {
+        id: 'select',
+        title: 'Select',
+        markup: '
 <select class="select">
-  <option>One</option>
-  <option>Two</option>
-  <option>Three</option>
-  <option>Four</option>
-  <option>Five</option>
+<option>One</option>
+<option>Two</option>
+<option>Three</option>
+<option>Four</option>
+<option>Five</option>
 </select>'
-        }
-      )
+      })
     }}
 
     {# Select - Multiple #}
     {{
-      render.component(
-        'Styleguide/SGCard/sg-card', {
-          id: 'select-multiple',
-          title: 'Select - Multiple',
-          markup: '
+      render.component('Styleguide/SGCard/sg-card', {
+        id: 'select-multiple',
+        title: 'Select - Multiple',
+        markup: '
 <select multiple class="select">
-  <option>One</option>
-  <option>Two</option>
-  <option>Three</option>
-  <option>Four</option>
-  <option>Five</option>
+<option>One</option>
+<option>Two</option>
+<option>Three</option>
+<option>Four</option>
+<option>Five</option>
 </select>'
-        }
-      )
+      })
     }}
 
   </div> {# .grid-container #}

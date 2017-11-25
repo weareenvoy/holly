@@ -1,3 +1,7 @@
+/**
+ * Component: Modal
+ */
+
 import { Component } from '../Component'
 import $ from 'jquery'
 

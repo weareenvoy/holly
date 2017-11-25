@@ -1,3 +1,7 @@
+/**
+ * Component: Stylguide Card
+ */
+
 import { Component } from '../../Component'
 
 export class SGCard extends Component {

@@ -1,0 +1,23 @@
+{% macro checkForId(ns, id) %}
+  {% if id is not defined %}
+    <div class="error-noid">
+      A <strong>unique ID property</strong> must be defined for this component.<br>
+      namespace: <i>{{ns}}</i><br>
+    </div>
+  {% endif %}
+{% endmacro %}
+
+{% macro gatherCssClasses(ns, modifier, additionalClasses) %}
+ {% spaceless %}
+    {% set cssClasses = '' %}
+
+    {% if modifier is defined %}
+        {% set cssClasses = cssClasses ~ ' ' ~ ns ~ '--' ~ modifier %}
+    {% endif %}
+
+    {% if additionalClasses is defined %}
+        {% set cssClasses = cssClasses ~ ' ' ~ additionalClasses %}
+    {% endif %}
+    {{ cssClasses }}
+  {% endspaceless %}
+{% endmacro %}
