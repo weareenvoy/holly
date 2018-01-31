@@ -28,7 +28,9 @@ gulp.task('styles', function () {
     responsiveType
   ]
   if (env === 'prod') {
-    processors.push(mqpacker())
+    processors.push(mqpacker({
+      sort: true
+    }))
     processors.push(cssnano)
   }
   return gulp.src(config.styles.paths.src + '/**/*.{scss,sass}')
