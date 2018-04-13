@@ -1,6 +1,6 @@
 {
   "name": "envoy-holly",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "ENVOYsites Gulp build system and boilerplate.",
   "main": "gulpfile.js",
   "scripts": {
