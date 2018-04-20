@@ -17,6 +17,7 @@ var notify = require('gulp-notify')
 var rev = require('gulp-rev')
 var es = require('event-stream')
 var browserSync = require('../browserSync').server
+var cache = require('gulp-cached')
 
 var srcScriptsGlob = [
   config.scripts.paths.src + '/**/*.js',
@@ -58,6 +59,7 @@ gulp.task('scripts:compile', function () {
       .bundle()
       .on('error', swallowError)
       .pipe(source(entry.dest))
+      .pipe(cache('scripts', {optimizeMemory:true}))
       .pipe(buffer())
       .pipe(gulpif((env === 'dev'), sourcemaps.init()))
       .pipe(gulpif((env === 'prod'), uglify()))
@@ -79,6 +81,6 @@ gulp.task('scripts:compile', function () {
 
 function swallowError (error) {
   console.log(error.toString())
-  notify.onError({ title: 'JS Error', message: 'Oops! Made a boobo with your JavaScript!' })(error)
+  notify.onError({ title: 'JS Error', message: 'Oops! Made a booboo with your JavaScript!' })(error)
   this.emit('end')
 }
