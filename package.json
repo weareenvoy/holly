@@ -30,7 +30,7 @@
     "css-mqpacker": "^6.0.1",
     "cssnano": "^3.10.0",
     "del": "^2.2.2",
-    "event-stream": "^3.3.4",
+    "event-stream": "3.3.4",
     "gulp": "^3.9.1",
     "gulp-batch-replace": "0.0.0",
     "gulp-if": "^2.0.2",
