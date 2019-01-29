@@ -17,6 +17,7 @@ var sourcemaps = require('gulp-sourcemaps')
 var gulpif = require('gulp-if')
 var notify = require('gulp-notify')
 var browserSync = require('../browserSync').server
+var cache = require('gulp-cached')
 
 /* $ gulp styles */
 gulp.task('styles', function () {
@@ -35,6 +36,7 @@ gulp.task('styles', function () {
   }
   return gulp.src(config.styles.paths.src + '/**/*.{scss,sass}')
     .pipe(gulpif((env === 'dev'), sourcemaps.init()))
+    .pipe(cache('styles'))
     .pipe(sass())
     .on('error', swallowError)
     .pipe(postcss(processors))
